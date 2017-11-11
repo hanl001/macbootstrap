@@ -63,9 +63,15 @@ if [[ ! -e ~/.oh-my-zsh ]]; then
     curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
 fi
 
-# link zshrc
+# link shell config
 mv ~/.zshrc ~/.zshrc_backup
-ln -s ~/.macbootstrap/zsh-config/.zshrc ~/.zshrc
+ln -s ~/.macbootstrap/sh-config/.zshrc ~/.zshrc
+
+mv ~/.bashrc ~/.bashrc_backup
+ln -s ~/.macbootstrap/sh-config/.bashrc ~/.bashrc
+
+mv ~/.bash_profile  ~/.bash_profile_backup
+ln -s ~/.macbootstrap/sh-config/.bash_profile ~/.bash_profile
 
 # Gem update
 sudo gem update --system
