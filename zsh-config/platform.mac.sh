@@ -1,3 +1,16 @@
+### -------- aliases ------------ ###
+alias la='ls -a'
+alias pin='pod install'
+alias gs='git status'
+alias ga='git add '
+alias gcm='git commit -m '
+alias gl='git pull'
+alias gp='git push'
+alias gb='git branch'
+alias gco='git checkout'
+alias soundoff='sudo nvram SystemAudioVolume=%80'
+alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
+#alias autoPackage='curl -s -u hanl:hanl -X POST "HTTP://127.0.0.1:8080/job/JFBackHome/build?token=123456"'
 alias o='open'
 alias oo='open .'
 alias ll='ls -alhG'
@@ -97,44 +110,15 @@ function bsgrep() {
     fi
 }
 
-function h(){
-    history | grep --color=always -i $1 | awk '{$1="";print $0}' | grep -v '^ h' # 查找关键字，去掉左侧的数字和 h 命令自身 \
-    sort | uniq -c | sort -rn | awk '{$1="";print NR " " $0}' | # 先去重（需要排序）然后根据次数排序，再去掉次数 \
-    tee ~/.histfile_color_result | gsed -r "s/\x1B\[([0-9]{1,3}((;[0-9]{1,3})*)?)?[m|K]//g" |  # 把带有颜色的结果写入临时文件，然后去除颜色 \
-    awk '{$1="";print "function " NR "() {" $0 "; echo \": $(date +%s):0;"$0"\" >> ~/.histfile }"}' | # 构造 function，把 $0 写入到 histfile 中 \
-    {while read line; do eval $line &>/dev/null; done}  # 调用 eval，让 function 生效
-    cat ~/.histfile_color_result | sed '1!G;h;$!d' # 倒序输出，更容易看到第一条
-}
-
-function s() {
-    word=$1
-    cd ~/dev/DailyLearning
-    ls | xargs cat | gawk 'BEGIN{RS="### "} {if(tolower($0) ~ /'"$word"'/)print "###", $0}' | egrep --color=always -i "$word|$|^"
-    cd -
-}
-
-function bssize() {
-    location=$1
-    if [ ${location} = "/" ]; then
-        df -gH
-        return
-    fi
-
-    if [ -d "${location}" ]; then
-        pushd $PWD > /dev/null
-        cd ${location}
-        du -d 1 -h -c
-        if [ ${location} != "." ]; then
-            popd >/dev/null
-        fi
-    else
-        if [ -f "${location}" ]; then
-            du -h ${location}
-        else
-            echo "No such file or directory"
-            return
-        fi
-    fi
+function hs(){
+   emulate -L zsh
+   local message=$1
+   history | grep --color=always -i "$message" | awk '{$1="";print $0}' |
+   sort | uniq -c | sort -rn | awk '{$1="";print NR " " $0}' |
+   tee ~/.histfile_color_result | gsed -r "s/\x1B\[([0-9]{1,3}((;[0-9]{1,3})*)?)?[m|K]//g" |
+   awk '{$1="";print "function " NR "() {" $0 "; echo \": $(date +%s):0;"$0"\" >> ~/.histfile }"}' | 
+   {while read line; do eval $line &>/dev/null; done}
+   cat ~/.histfile_color_result | sed '1!G;h;$!d' 
 }
 
 function pt() {
@@ -144,23 +128,31 @@ function pt() {
     export https_proxy=http://localhost:8123
 }
 
-mkcdir () {
+mtdir () {
     mkdir -p -- "$1" &&
     cd -P -- "$1"
 }
 
-# Get resolution of image
-function resolution() {
-    brew_install -q exiv2
-    exiv2 $1 | grep 'Image size' | column 4 5 6
+
+### -------- tools add ----------- ###
+
+##new blog
+
+function newblog() {
+	emulate -L zsh
+	local blog_name=$1
+	sudo hexo new $blog_name
+	cd ~/Hexo/source/_posts
+	sudo chmod 777 $blog_name.md
+	open $blog_name.md
 }
 
-# Android
-function aupdate() {
-     cd /tmp/1
-    if [ -e tieba-release.apk  ]; then
-        rm tieba-release.apk
-    fi
-    wget "http://ci.tieba.baidu.com/view/TBPP_Android/job/FC_Native_Android_Build_ICODE/""$1""/artifact/gen_apks/tieba-release.apk"
-    adb install -rg tieba-release.apk
-}
+##pyenv python版本管理工具
+#export PYENV_ROOT=/usr/local/var/pyenv
+#if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+
+##nvm node管理工具
+##rnvm() {
+##export NVM_DIR="$HOME/.nvm"
+##. "$(brew --prefix nvm)/nvm.sh"
+##}

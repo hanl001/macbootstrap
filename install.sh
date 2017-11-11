@@ -25,12 +25,6 @@ else
     echo “You have installed wget”
 fi
 
-if [[ ! -e /usr/local/bin/gsed ]]; then
-    brew install gnu-sed
-else
-    echo “You have installed gsed”
-fi
-
 if [[ ! -e /usr/local/bin/cmake ]]; then
     brew install cmake
 else
@@ -55,35 +49,11 @@ else
     echo "You have installed ctags"
 fi
 
-if [[ ! -e /usr/local/bin/gawk ]]; then
-    brew install gawk
-fi
-
-if [[ ! -e /Applications/Google\ Chrome.app ]]; then
-    brew cask install google-chrome
-else
-    echo "You have installed chrome"
-fi
-
-# install MacVim
-if [[ ! -e /usr/local/bin/gvim ]]; then
-    unzip software/MacVim.zip
-    mv MacVim.app /Applications/MacVim.app
-    ln -s /Applications/MacVim.app/Contents/bin/gvim /usr/local/bin/gvim
-    rm -rf __MACOSX
-else
-    echo "You have installed macvim”"
-fi
-
-# install coreutils
-if [[ ! -e /usr/local/opt/coreutils ]]; then
-    brew install coreutils
-else
-    echo "You have installed coreutils"
-fi
-
-# install exiv2 for image info
-brew_install exiv2
+##if [[ ! -e /usr/bin/ctags ]]; then
+##    brew install thefuck
+##else
+##    echo "You have installed the fuck"
+##fi
 
 # link git config
 mv ~/.gitconfig ~/.gitconfig_backup
@@ -96,22 +66,6 @@ fi
 # link zshrc
 mv ~/.zshrc ~/.zshrc_backup
 ln -s ~/.macbootstrap/zsh-config/.zshrc ~/.zshrc
-
-# vim configuration
-git clone https://github.com/bestswifter/.vim.git --recursive ~/.vim
-if [[ -e ~/.vimrc ]]; then
-    mv ~/.vimrc ~/.vimrc_backup
-fi
-ln -s ~/.vim/.vimrc ~/.vimrc
-
-# install YCM
-cd ~/.vim/bundle/
-git clone https://github.com/Valloric/YouCompleteMe.git
-cd YouCompleteMe
-git submodule update --init --recursive
-./install.py --clang-completer --tern-completer
-
-vim -c PluginInstall -c quitall
 
 # Gem update
 sudo gem update --system
