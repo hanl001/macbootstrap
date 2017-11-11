@@ -90,5 +90,5 @@ eval "$(thefuck --alias fuck)"
 #source bash
 source ~/.bashrc
 
-STRAP_ROOT = "$HOME/.macbootstrap"
-source $HOME/.macbootstrap/"root.sh
+STRAP_ROOT="$HOME/.macbootstrap"
+source $HOME/.macbootstrap/root.sh
