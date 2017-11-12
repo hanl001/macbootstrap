@@ -1,3 +1,4 @@
+
 # Follow this page to avoid enter password
 # http://apple.stackexchange.com/questions/236806/prevent-networksetup-from-asking-for-password
 function proxy() {
@@ -15,7 +16,7 @@ function proxy() {
         sudo networksetup -setwebproxystate $network off;
         sudo networksetup -setsecurewebproxystate  $network off;
         sudo networksetup -setautoproxystate $network off;
-        sudo networksetup -setsocksfirewallproxy "$network" localhost 14179
+        sudo networksetup -setsocksfirewallproxy "$network" localhost 1086
         ;;
     off)
         sudo networksetup -setwebproxystate $network off;
@@ -61,7 +62,7 @@ function proxy() {
         echo "Usage: p {on|off|g|s}"
         echo "p on : Set proxy to Charles(port 8888)"
         echo "p off: Reset proxy to system default"
-        echo "p g  : Set proxy to GoAgentx(port 14179)"
+        echo "p g  : Set proxy to Shadowsocks"
         echo "p s  : Show current network proxy status"
         echo "p *  : Show usage"
         ;;
@@ -69,10 +70,3 @@ function proxy() {
 }
 
 alias p=proxy
-
-function pt() {
-    launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.polipo.plist
-    launchctl load ~/Library/LaunchAgents/homebrew.mxcl.polipo.plist
-    export http_proxy=http://localhost:8123
-    export https_proxy=http://localhost:8123
-}

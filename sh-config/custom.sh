@@ -1,8 +1,8 @@
 ### -------- aliases ------------ ###
 alias pin='pod install'
 alias gs='git status'
-alias ga='git add '
-alias gcm='git commit -m '
+alias ga='git add'
+alias gcm='git commit -m'
 alias gl='git pull'
 alias gp='git push'
 alias gb='git branch'
@@ -12,7 +12,6 @@ alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
 #alias autoPackage='curl -s -u hanl:hanl -X POST "HTTP://127.0.0.1:8080/job/JFBackHome/build?token=123456"'
 alias o='open'
 alias oo='open .'
-alias ll='ls -alhG'
 alias la='ls -a'
 alias ip="ifconfig | sed -n -e '/127.0.0.1/d' -e '/inet /p'|awk '{print \$2}'"
 
@@ -30,14 +29,6 @@ function ow() {
     fi
 }
 
-#如果不指定文件名，默认是当前目录下递归搜索，否则在指定文件名中搜索
-function bsgrep() {
-    if [ $# -eq 1 ]; then
-        grep -rna "$1" .
-    else
-        grep -na "$1" "$pwd/$2"
-    fi
-}
 
 function hs(){
    emulate -L zsh
