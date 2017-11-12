@@ -3,25 +3,25 @@
 if [[ ! -e /usr/local/bin/brew ]]; then
     /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 else
-    echo “You have installed brew”
+    echo "You have installed brew"
 fi
 
 if [[ ! -e /Applications/iTerm.app ]]; then
     brew cask install iterm2
 else
-    echo “You have installed iTerm2”
+    echo "You have installed iTerm2"
 fi
 
 if [[ ! -e /Applications/SourceTree.app/ ]]; then
     brew cask install sourcetree
 else
-    echo “You have installed SourceTree”
+    echo "You have installed SourceTree"
 fi
 
 if [[ ! -e /usr/local/bin/wget ]]; then
     brew install wget
 else
-    echo “You have installed wget”
+    echo "You have installed wget"
 fi
 
 if [[ ! -e /usr/local/bin/cmake ]]; then
