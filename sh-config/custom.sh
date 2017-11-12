@@ -7,6 +7,7 @@ alias gl='git pull'
 alias gp='git push'
 alias gb='git branch'
 alias gco='git checkout'
+alias gdf='git diff'
 alias soundoff='sudo nvram SystemAudioVolume=%80'
 alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
 #alias autoPackage='curl -s -u hanl:hanl -X POST "HTTP://127.0.0.1:8080/job/JFBackHome/build?token=123456"'
