@@ -48,12 +48,6 @@ else
     echo "You have installed ctags"
 fi
 
-##if [[ ! -e /usr/bin/ctags ]]; then
-##    brew install thefuck
-##else
-##    echo "You have installed the fuck"
-##fi
-
 # link git config
 mv ~/.gitconfig ~/.gitconfig_backup
 ln -sf ~/.macbootstrap/git-config/.gitconfig ~/.gitconfig

@@ -7,7 +7,7 @@ A shell script to help you set up development environment.
 Just execute:
 
 ```shell
-curl https://raw.githubusercontent.com/bestswifter/macbootstrap/master/bootstrap.sh | sh
+curl https://raw.githubusercontent.com/hanl001/macbootstrap/master/setup.sh | sh
 ```
 
 # Feature
