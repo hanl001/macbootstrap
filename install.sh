@@ -59,13 +59,13 @@ fi
 
 # link shell config
 mv ~/.zshrc ~/.zshrc_backup
-ln -sf ~/.macbootstrap/sh-config/.zshrc ~/.zshrc
+ln -sf ~/.macbootstrap/sh-config/_zshrc ~/.zshrc
 
 mv ~/.bashrc ~/.bashrc_backup
-ln -sf ~/.macbootstrap/sh-config/.bashrc ~/.bashrc
+ln -sf ~/.macbootstrap/sh-config/_bashrc ~/.bashrc
 
 mv ~/.bash_profile  ~/.bash_profile_backup
-ln -sf ~/.macbootstrap/sh-config/.bash_profile ~/.bash_profile
+ln -sf ~/.macbootstrap/sh-config/_bash_profile ~/.bash_profile
 
 # Gem update
 sudo gem update --system
