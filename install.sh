@@ -1,3 +1,4 @@
+STRAP_ROOT="$HOME/.macbootstrap"
 #!/bin/sh
 
 if [[ ! -e /usr/local/bin/brew ]]; then

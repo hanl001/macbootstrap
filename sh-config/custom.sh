@@ -1,5 +1,6 @@
 ### -------- aliases ------------ ###
 alias pin='pod install'
+alias prp='pod repo update'
 alias gs='git status'
 alias ga='git add'
 alias gcm='git commit -m'
