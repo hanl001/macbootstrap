@@ -49,25 +49,12 @@ else
     echo "You have installed ctags"
 fi
 
-# link git config
-mv ~/.gitconfig ~/.gitconfig_backup
-ln -sf ~/.macbootstrap/git-config/.gitconfig ~/.gitconfig
-
 if [[ ! -e ~/.oh-my-zsh ]]; then
     curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
 fi
-
-# link shell config
-mv ~/.zshrc ~/.zshrc_backup
-ln -sf ~/.macbootstrap/sh-config/_zshrc ~/.zshrc
-
-mv ~/.bashrc ~/.bashrc_backup
-ln -sf ~/.macbootstrap/sh-config/_bashrc ~/.bashrc
-
-mv ~/.bash_profile  ~/.bash_profile_backup
-ln -sf ~/.macbootstrap/sh-config/_bash_profile ~/.bash_profile
 
 # Gem update
 sudo gem update --system
 sudo gem install -n /usr/local/bin cocoapods
 sudo gem install colored
+

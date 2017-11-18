@@ -34,10 +34,4 @@ function start_ssh_agent() {
     fi
 }
 
-function set_alias() {
-    alias ll='ls -l'
-    alias ssh='ssh -A'
-}
-
 start_ssh_agent
-set_alias

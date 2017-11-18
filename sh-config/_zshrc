@@ -79,15 +79,6 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 #
 #
-### -------- tools add ----------- ###
 
-##autojump
-[[ -s ~/.autojump/etc/profile.d/autojump.sh ]] && . ~/.autojump/etc/profile.d/autojump.sh
-
-##the fuck
-eval "$(thefuck --alias fuck)"
-
-#source bash
-source ~/.bashrc
-
+# must add for macbootstrap
 source $HOME/.macbootstrap/root.sh

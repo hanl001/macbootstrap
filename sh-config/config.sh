@@ -1,9 +1,13 @@
+### -------- tools add ----------- ###
 
 ##autojump
 [[ -s ~/.autojump/etc/profile.d/autojump.sh ]] && . ~/.autojump/etc/profile.d/autojump.sh
 
 ##the fuck
 eval "$(thefuck --alias fuck)"
+
+#source bash
+source ~/.bashrc
 
 ##pyenv python版本管理工具
 #export PYENV_ROOT=/usr/local/var/pyenv

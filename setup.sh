@@ -8,3 +8,4 @@ xcode-select --install
 git clone "https://github.com/hanl001/macbootstrap" ~/.macbootstrap
 exe_cmd "cd ~/.macbootstrap"
 exe_cmd "bash install.sh"
+sh manager.sh relink
