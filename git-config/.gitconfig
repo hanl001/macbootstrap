@@ -1,7 +1,7 @@
 [init]
 	templatedir = ~/.gitignore_global
 [core]
-    excludesfile = /Users/hanling/.gitignore_global
+	excludesfile = /Users/hanling/.gitignore
 [alias]
 	st = status
 	ci = commit
