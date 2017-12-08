@@ -38,8 +38,8 @@ function ow() {
 }
 
 function pui() {
-    exe_cmd 'pod install'
     exe_cmd 'pod repo update'
+    exe_cmd 'pod install'
 }
 
 function hs(){
