@@ -17,6 +17,12 @@ alias oo='open .'
 alias la='ls -a'
 alias ip="ifconfig | sed -n -e '/127.0.0.1/d' -e '/inet /p'|awk '{print \$2}'"
 
+function exe_cmd()
+{
+	echo $1
+	eval $1
+}
+
 ### -------- function ------------ ###
 function ow() {
     if [[ -n "$@" ]]; then
@@ -31,6 +37,10 @@ function ow() {
     fi
 }
 
+function pui() {
+    exe_cmd 'pod install'
+    exe_cmd 'pod repo update'
+}
 
 function hs(){
    emulate -L zsh
