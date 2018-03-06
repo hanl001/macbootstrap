@@ -3,9 +3,6 @@
 ##autojump
 [[ -s ~/.autojump/etc/profile.d/autojump.sh ]] && . ~/.autojump/etc/profile.d/autojump.sh
 
-##the fuck
-eval "$(thefuck --alias fuck)"
-
 #source bash
 source ~/.bashrc
 
