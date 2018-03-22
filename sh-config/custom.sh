@@ -17,6 +17,7 @@ alias o='open'
 alias oo='open .'
 alias la='ls -a'
 alias ip="ifconfig | sed -n -e '/127.0.0.1/d' -e '/inet /p'|awk '{print \$2}'"
+alias ospace='open *.xcworkspace'
 
 function exe_cmd()
 {
