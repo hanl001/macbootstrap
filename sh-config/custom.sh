@@ -1,23 +1,12 @@
 ### -------- aliases ------------ ###
 alias pin='pod install'
 alias pud='pod update'
-alias prp='pod repo update'
-alias gs='git status'
-alias ga='git add'
-alias gcm='git commit -m'
-alias gl='git pull'
-alias gp='git push'
-alias gb='git branch'
-alias gco='git checkout'
-alias gdf='git diff'
 alias soundoff='sudo nvram SystemAudioVolume=%80'
 alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
-#alias autoPackage='curl -s -u hanl:hanl -X POST "HTTP://127.0.0.1:8080/job/JFBackHome/build?token=123456"'
 alias o='open'
-alias oo='open .'
 alias la='ls -a'
 alias ip="ifconfig | sed -n -e '/127.0.0.1/d' -e '/inet /p'|awk '{print \$2}'"
-alias ospace='open *.xcworkspace'
+alias os='open *.xcworkspace'
 
 function exe_cmd()
 {
@@ -44,7 +33,7 @@ function pui() {
     exe_cmd 'pod install'
 }
 
-function hs(){
+function hs() {
    emulate -L zsh
    local message=$1
    history | grep --color=always -i "$message" | awk '{$1="";print $0}' |
