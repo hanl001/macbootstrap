@@ -3,7 +3,6 @@
 export PATH="$PATH:$HOME/.rvm/bin"
 export HOMEBREW_GITHUB_API_TOKEN=84b56fcb4adb25d20de69098af7bd05f3f35acd7
 
-
 ## for spark link: https://blog.sicara.com/get-started-pyspark-jupyter-guide-tutorial-ae2fe84f594f
 #export SPARK_HOME=/opt/spark-2.4.0
 #export PATH=$SPARK_HOME/bin:$PATH

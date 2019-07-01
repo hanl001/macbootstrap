@@ -32,7 +32,7 @@ function xgrep() {
 }
 
 #如果不指定文件名，默认是当前目录下递归搜索，否则在指定文件名中搜索
-function bsgrep() {
+function cgrep() {
     if [ $# -eq 1 ]; then
         grep -rna "$1" .
     else

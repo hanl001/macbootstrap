@@ -68,5 +68,3 @@ function proxy() {
         ;;
     esac
 }
-
-alias p=proxy
