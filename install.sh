@@ -53,6 +53,10 @@ if [[ ! -e ~/.oh-my-zsh ]]; then
     curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
 fi
 
+if [[ ! -e ~/Library/Developer/Xcode/UserData/CodeSnippets ]]; then
+    git clone https://github.com/hanl001/CodeSnippets.git ~/Library/Developer/Xcode/UserData/CodeSnippets
+fi
+
 # Gem update
 sudo gem update --system
 sudo gem install -n /usr/local/bin cocoapods
