@@ -7,6 +7,7 @@ alias o='open'
 alias la='ls -a'
 alias ip="ifconfig | sed -n -e '/127.0.0.1/d' -e '/inet /p'|awk '{print \$2}'"
 alias os='open *.xcworkspace'
+alias oj='open *.xcodeproj'
 
 function exe_cmd()
 {

@@ -1,5 +1,5 @@
 [init]
-	templatedir = ~/.gitignore_global
+	#templatedir = ~/.gitignore_global
 [core]
 	excludesfile = /Users/hanling/.gitignore_global
 [alias]
