@@ -61,6 +61,5 @@ fi
 sudo gem update --system
 sudo gem install -n /usr/local/bin cocoapods
 sudo gem install colored
-npm install -g hexo-cli
 
 
