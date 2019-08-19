@@ -60,6 +60,7 @@ fi
 # Gem update
 sudo gem update --system
 sudo gem install -n /usr/local/bin cocoapods
+sudo gem install -n /usr/local/bin fastlane
 sudo gem install colored
 
 
