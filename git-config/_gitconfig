@@ -4,9 +4,11 @@
 	excludesfile = /Users/hanling/.gitignore_global
 [alias]
 	st = status
-	ci = commit
-	sb = submodule
+	cm = commit -am
+	rb = rebase
 	co = checkout
+	sb = submodule
+    p = push
 	pm = push origin master
 	pd = push origin dev
 	lg = log --all --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ci) %C(bold blue)<%an>%Creset' --abbrev-commit
@@ -32,3 +34,5 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+[commit]
+	template = /Users/hanling/.stCommitMsg
