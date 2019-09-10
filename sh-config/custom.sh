@@ -10,13 +10,13 @@ alias ip="ifconfig | sed -n -e '/127.0.0.1/d' -e '/inet /p'|awk '{print \$2}'"
 alias os='open *.xcworkspace'
 alias oj='open *.xcodeproj'
 
+### -------- function ------------ ###
 function exe_cmd()
 {
 	echo $1
 	eval $1
 }
 
-### -------- function ------------ ###
 function ow() {
     if [[ -n "$@" ]]; then
         (cd "$@" && ow)
@@ -30,11 +30,6 @@ function ow() {
     fi
 }
 
-function pui() {
-    exe_cmd 'pod repo update'
-    exe_cmd 'pod install'
-}
-
 function hs() {
    emulate -L zsh
    local message=$1
@@ -44,19 +39,4 @@ function hs() {
    awk '{$1="";print "function " NR "() {" $0 "; echo \": $(date +%s):0;"$0"\" >> ~/.histfile }"}' | 
    {while read line; do eval $line &>/dev/null; done}
    cat ~/.histfile_color_result | sed '1!G;h;$!d' 
-}
-
-mtdir () {
-    mkdir -p -- "$1" &&
-    cd -P -- "$1"
-}
-
-##new blog
-function newblog() {
-	emulate -L zsh
-	local blog_name=$1
-	sudo hexo new $blog_name
-	cd ~/Hexo/source/_posts
-	sudo chmod 777 $blog_name.md
-	open $blog_name.md
 }
