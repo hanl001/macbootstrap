@@ -43,6 +43,12 @@ else
     echo "You have installed node"
 fi
 
+if [[ ! -e /usr/local/bin/gsed ]]; then
+    brew install gsed
+else
+    echo "You have installed gsed"
+fi
+
 if [[ ! -e /usr/bin/ctags ]]; then
     brew install ctags --HEAD
 else
