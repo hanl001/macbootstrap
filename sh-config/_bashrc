@@ -16,3 +16,4 @@ export HOMEBREW_GITHUB_API_TOKEN=84b56fcb4adb25d20de69098af7bd05f3f35acd7
 #alias snotebook='$SPARK_PATH/bin/pyspark --master local[2]'
 
 source ~/.bash_profile
+set -o vi

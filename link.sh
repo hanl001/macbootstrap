@@ -27,3 +27,6 @@ exe_cmd "ln -sf ~/.macbootstrap/sh-config/_bashrc ~/.bashrc"
 
 exe_cmd "mv ~/.bash_profile  ~/.bash_profile_backup"
 exe_cmd "ln -sf ~/.macbootstrap/sh-config/_bash_profile ~/.bash_profile" 
+
+exe_cmd "mv ~/.inputrc  ~/.inputrc_backup"
+exe_cmd "ln -sf ~/.macbootstrap/sh-config/_inputrc ~/.inputrc"
