@@ -11,10 +11,11 @@ alias os='open *.xcworkspace'
 alias oj='open *.xcodeproj'
 alias vs='open /System/Volumes/Data/Applications/Visual\ Studio\ Code.app'
 alias gti='git'
+alias ph='open /System/Volumes/Data/Applications/PhpStorm.app'
 
 ### -------- function ------------ ###
-function exe_cmd()
-{
+
+function exe_cmd() {
 	echo $1
 	eval $1
 }
@@ -41,4 +42,8 @@ function hs() {
    awk '{$1="";print "function " NR "() {" $0 "; echo \": $(date +%s):0;"$0"\" >> ~/.histfile }"}' | 
    {while read line; do eval $line &>/dev/null; done}
    cat ~/.histfile_color_result | sed '1!G;h;$!d' 
+}
+
+function btc() {
+    curl -s 'https://blockchain.info/ticker' | grep 'USD\|CNY'
 }
