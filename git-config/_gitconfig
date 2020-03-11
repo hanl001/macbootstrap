@@ -19,8 +19,8 @@
 [difftool]
     cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 [user]
-	email = hanling1217@gmail.com
-	name = hanl001
+	email = 
+	name = 
 [push]
 	default = simple
 [difftool "sourcetree"]
