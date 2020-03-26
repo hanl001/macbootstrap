@@ -10,7 +10,6 @@ alias ip="ifconfig | sed -n -e '/127.0.0.1/d' -e '/inet /p'|awk '{print \$2}'"
 alias os='open *.xcworkspace'
 alias oj='open *.xcodeproj'
 alias vs='open /System/Volumes/Data/Applications/Visual\ Studio\ Code.app'
-alias gti='git'
 alias ph='open /System/Volumes/Data/Applications/PhpStorm.app'
 
 ### -------- function ------------ ###
