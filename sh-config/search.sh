@@ -31,10 +31,14 @@ function xgrep() {
     fi
 }
 
-#如果不指定文件名，默认是当前目录下递归搜索，否则在指定文件名中搜索
+# grep file or dir
 function cgrep() {
     if [ $# -eq 1 ]; then
         grep -rna "$1" .
+    elif [ -d "$2" ]; then
+        grep -rna "$1" "$2"
+    elif [ -f "$2" ]; then
+        grep -na "$1" "$2"
     else
         grep -na "$1" "$pwd/$2"
     fi
