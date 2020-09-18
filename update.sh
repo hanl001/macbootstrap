@@ -1,7 +1,11 @@
-git status
-git fetch
-git rebase
+cd ~/.macbootstrap
+git stash
+git pull -r
 git stash pop
+cd -
+cd ~/.oh-my-zsh
+git stash
 upgrade_oh_my_zsh
-#omz update
+git stash pop
+cd -
 
