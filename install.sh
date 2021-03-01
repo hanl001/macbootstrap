@@ -43,6 +43,12 @@ else
     echo "You have installed node"
 fi
 
+if [[ ! -e /usr/local/bin/pod ]]; then
+    brew install cocoapods
+else
+    echo "You have installed cocoapods"
+fi
+
 if [[ ! -e /usr/local/bin/gsed ]]; then
     brew install gsed
 else
@@ -65,7 +71,6 @@ fi
 
 # Gem update
 sudo gem update --system
-sudo gem install -n /usr/local/bin cocoapods
 sudo gem install -n /usr/local/bin fastlane
 sudo gem install colored
 
