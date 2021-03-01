@@ -52,3 +52,20 @@ unset __conda_setup
 # <<< conda init <<<
 
 export PATH="$HOME/.cargo/bin:$PATH"
+
+## go lotus config 
+##export LOTUS_DATA_PATH=/opt/data/lotus
+##export RUSTUP_DIST_SERVER=https://mirrors.sjtug.sjtu.edu.cn/rust-static
+##export GOPATH=$HOME/go
+##export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
+##export GOPROXY=https://goproxy.cn
+##export IPFS_GATEWAY=https://proof-parameters.s3.cn-south-1.jdcloud-oss.com/ipfs/
+##export LOTUS_PATH=/opt/data/lotus/.lotus
+##export LOTUS_MINER_PATH=/opt/data/lotus/.lotusminer
+##export LOTUS_SKIP_GENESIS_CHECK=_yes_
+export CGO_CFLAGS_ALLOW="-D__BLST_PORTABLE__"
+export CGO_CFLAGS="-D__BLST_PORTABLE__"
+
+## java home
+export JAVA_HOME="/Applications/Android Studio.app/Contents/jre/jdk/Contents/Home"
+
