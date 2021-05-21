@@ -7,18 +7,6 @@ else
     echo "You have installed brew"
 fi
 
-if [[ ! -e /Applications/iTerm.app ]]; then
-    brew cask install iterm2
-else
-    echo "You have installed iTerm2"
-fi
-
-if [[ ! -e /Applications/SourceTree.app/ ]]; then
-    brew cask install sourcetree
-else
-    echo "You have installed SourceTree"
-fi
-
 if [[ ! -e /usr/local/bin/wget ]]; then
     brew install wget
 else
@@ -43,18 +31,6 @@ else
     echo "You have installed node"
 fi
 
-if [[ ! -e /usr/local/bin/pod ]]; then
-    brew install cocoapods
-else
-    echo "You have installed cocoapods"
-fi
-
-if [[ ! -e /usr/local/bin/gsed ]]; then
-    brew install gsed
-else
-    echo "You have installed gsed"
-fi
-
 if [[ ! -e /usr/bin/ctags ]]; then
     brew install ctags --HEAD
 else
@@ -62,7 +38,7 @@ else
 fi
 
 if [[ ! -e ~/.oh-my-zsh ]]; then
-    curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 fi
 
 if [[ ! -e ~/Library/Developer/Xcode/UserData/CodeSnippets ]]; then
@@ -72,6 +48,7 @@ fi
 # Gem update
 sudo gem update --system
 sudo gem install -n /usr/local/bin fastlane
+sudo gem install cocoapods -v 1.9.3 
 sudo gem install colored
 
 

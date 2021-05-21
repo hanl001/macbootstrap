@@ -15,4 +15,4 @@ export PATH="$PATH:$HOME/.rvm/bin"
 #alias snotebook='$SPARK_PATH/bin/pyspark --master local[2]'
 
 source ~/.bash_profile
-source /opt/data/vlotus/runtime/env.sh
+#source /opt/data/vlotus/runtime/env.sh
