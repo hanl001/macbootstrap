@@ -1,5 +1,5 @@
 ## flutter env
-export PATH="$PATH:Users/hanling/Documents/flutter/bin"
+export PATH="$PATH:$HOME/flutter/bin"
 ## arc env
 export PATH="$PATH:$HOME/phabricator/arcanist/bin"
 
