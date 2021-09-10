@@ -5,3 +5,6 @@
 
 #source bash
 source ~/.bashrc
+
+# key binder
+bindkey '^p' autosuggest-accept
