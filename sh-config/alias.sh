@@ -3,7 +3,7 @@ alias pud='pod update'
 alias soundoff='sudo nvram SystemAudioVolume=%80'
 alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
 alias o='open'
-alias oo='open '
+alias oo='open .'
 alias la='ls -a'
 alias ip="ifconfig | sed -n -e '/127.0.0.1/d' -e '/inet /p'|awk '{print \$2}'"
 alias os='open *.xcworkspace'
