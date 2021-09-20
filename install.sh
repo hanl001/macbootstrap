@@ -49,11 +49,18 @@ else
     echo "You have installed ctags"
 fi
 
+if [[ ! -e /usr/local/bin/ranger ]]; then
+    brew install ranger
+else
+    echo "You have installed ranger"
+fi
+
 if [[ ! -e /usr/local/bin/pod ]]; then
     sudo gem install cocoapods
 else
     echo "You have installed cocoapods"
 fi
+
 if [[ ! -e /usr/local/bin/fastlane ]]; then
     sudo gem install colored
     sudo gem install -n /usr/local/bin fastlane
