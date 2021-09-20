@@ -13,6 +13,12 @@ else
     echo "You have installed wget"
 fi
 
+if [[ ! -e /usr/local/bin/fzf ]]; then
+    brew install fzf
+else
+    echo "You have installed fzf"
+fi
+
 if [[ ! -e /usr/local/bin/cmake ]]; then
     brew install cmake
 else
