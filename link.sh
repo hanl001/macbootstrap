@@ -17,11 +17,23 @@ function exe_cmd()
 exe_cmd "ln -sf ~/.macbootstrap/git-config/_gitconfig ~/.gitconfig"
 exe_cmd "ln -sf ~/.macbootstrap/git-config/_gitignore_global ~/.gitignore_global"
 
+
 # link shell config
 exe_cmd "ln -sf ~/.macbootstrap/sh-config/_zshrc ~/.zshrc"
-
 exe_cmd "ln -sf ~/.macbootstrap/sh-config/_bashrc ~/.bashrc"
-
 exe_cmd "ln -sf ~/.macbootstrap/sh-config/_bash_profile ~/.bash_profile" 
-
 exe_cmd "ln -sf ~/.macbootstrap/sh-config/_inputrc ~/.inputrc"
+
+
+# link ranger config
+exe_cmd "ln -sf ~/.macbootstrap/tool-config/ranger/commands.py ~/.config/ranger/commands.py"
+exe_cmd "ln -sf ~/.macbootstrap/tool-config/ranger/commands_full.py ~/.config/ranger/commands_full.py"
+exe_cmd "ln -sf ~/.macbootstrap/tool-config/ranger/rc.conf ~/.config/ranger/rc.conf"
+exe_cmd "ln -sf ~/.macbootstrap/tool-config/ranger/rifle.conf ~/.config/ranger/rifle.conf"
+exe_cmd "ln -sf ~/.macbootstrap/tool-config/ranger/scope.sh ~/.config/ranger/scope.sh"
+
+
+# link karabiner config
+exe_cmd "ln -sf ~/.macbootstrap/tool-config/karabiner/karabiner.json ~/.config/karabiner/karabiner.json"
+complex_file="assets/complex_modifications/1566201508.json"
+exe_cmd "ln -sf ~/.macbootstrap/tool-config/karabiner/$complex_file ~/.config/karabiner/$complex_file"
