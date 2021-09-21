@@ -55,6 +55,15 @@ else
     echo "You have installed ranger"
 fi
 
+if [[ ! -e /usr/local/bin/imgcat ]]; then
+    cd /usr/local/bin
+    wget https://raw.githubusercontent.com/gnachman/iTerm2/master/tests/imgcat
+    chmod +x imgcat
+    cd -
+else
+    echo "You have installed imgcat"
+fi
+
 if [[ ! -e /usr/local/bin/pod ]]; then
     sudo gem install cocoapods
 else
