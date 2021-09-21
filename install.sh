@@ -102,3 +102,9 @@ else
     echo "You have cloned zsh syntax highlighting"
 fi
 
+if [[ ! -e ~/.vim_anywhere ]]; then
+    git clone git@github.com:hanl001/vim_anywhere.git ~/.vim_anywhere
+    bash ~/.vim_anywhere/setup.sh
+else
+    echo "You have installed fastlane"
+fi

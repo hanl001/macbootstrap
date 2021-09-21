@@ -12,6 +12,7 @@ alias vs='open /System/Volumes/Data/Applications/Visual\ Studio\ Code.app'
 alias ph='open /System/Volumes/Data/Applications/PhpStorm.app'
 alias sf='defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder'
 alias hf='defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder'
+alias vf='vim $(fzf --height 40%)'
 
 alias 。。='..'
 alias 。='.'
