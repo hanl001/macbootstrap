@@ -77,7 +77,6 @@ else
     echo "You have installed fastlane"
 fi
 
-
 if [[ ! -e ~/.oh-my-zsh ]]; then
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 else
@@ -106,5 +105,5 @@ if [[ ! -e ~/.vim_anywhere ]]; then
     git clone git@github.com:hanl001/vim_anywhere.git ~/.vim_anywhere
     bash ~/.vim_anywhere/setup.sh
 else
-    echo "You have installed fastlane"
+    echo "You have installed vim_anywhere"
 fi
