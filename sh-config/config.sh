@@ -4,20 +4,23 @@
 
 export PATH="$PATH:$HOME/.rvm/bin"
 
-## flutter env
+# flutter env
 export PATH="$PATH:$HOME/flutter/bin"
 
-## arc env
+# arc env
 export PATH="$PATH:$HOME/phabricator/arcanist/bin"
 
-## cargo env
+# cargo env
 export PATH="$HOME/.cargo/bin:$PATH"
 
-## java home
+# java home
 export JAVA_HOME="/Applications/Android Studio.app/Contents/jre/jdk/Contents/Home"
 
-##autojump
+# autojump
 [[ -s ~/.autojump/etc/profile.d/autojump.sh ]] && . ~/.autojump/etc/profile.d/autojump.sh
+
+# fzf
+export FZF_DEFAULT_OPTS="--height 40% --layout=reverse --preview '(highlight -O ansi {} || cat {}) 2> /dev/null | head -500'"
 
 # key binder
 bindkey '^p' autosuggest-accept
