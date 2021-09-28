@@ -23,5 +23,5 @@ function hs() {
 }
 
 function btc() {
-    curl -s 'https://blockchain.info/ticker' | grep 'USD\|CNY'
+    curl -s 'https://blockchain.info/ticker'
 }
