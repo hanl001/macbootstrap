@@ -1,55 +1,55 @@
 STRAP_ROOT="$HOME/.macbootstrap"
 #!/bin/sh
 
-if [[ ! -e /usr/local/bin/brew ]]; then
+if [[ ! -e /opt/homebrew/bin/brew ]]; then
     /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 else
     echo "You have installed brew"
 fi
 
-if [[ ! -e /usr/local/bin/wget ]]; then
+if [[ ! -e /opt/homebrew/bin/wget ]]; then
     brew install wget
 else
     echo "You have installed wget"
 fi
 
-if [[ ! -e /usr/local/bin/fzf ]]; then
+if [[ ! -e /opt/homebrew/bin/fzf ]]; then
     brew install fzf
 else
     echo "You have installed fzf"
 fi
 
-if [[ ! -e /usr/local/bin/cmake ]]; then
+if [[ ! -e /opt/homebrew/bin/cmake ]]; then
     brew install cmake
 else
     echo "You have installed cmake"
 fi
 
-if [[ ! -e /usr/local/bin/autojump ]]; then
+if [[ ! -e /opt/homebrew/bin/autojump ]]; then
     brew install autojump
 else
     echo "You have installed autojump"
 fi
 
-if [[ ! -e /usr/local/bin/node ]]; then
+if [[ ! -e /opt/homebrew/bin/node ]]; then
     brew install node
 else
     echo "You have installed node"
 fi
 
-if [[ ! -e /usr/local/bin/gsed ]]; then
+if [[ ! -e /opt/homebrew/bin/gsed ]]; then
     brew install gnu-sed
 else
     echo "You have installed gsed"
 fi
 
-if [[ ! -e /usr/bin/ctags ]]; then
+if [[ ! -e /opt/homebrew/bin/ctags ]]; then
     brew install ctags --HEAD
 else
     echo "You have installed ctags"
 fi
 
-if [[ ! -e /usr/local/bin/ranger ]]; then
+if [[ ! -e /opt/homebrew/bin/ranger ]]; then
     brew install ranger
 else
     echo "You have installed ranger"
@@ -64,15 +64,14 @@ else
     echo "You have installed imgcat"
 fi
 
-if [[ ! -e /usr/local/bin/pod ]]; then
-    sudo gem install cocoapods
+if [[ ! -e /opt/homebrew/bin/pod ]]; then
+    brew install cocoapods
 else
     echo "You have installed cocoapods"
 fi
 
-if [[ ! -e /usr/local/bin/fastlane ]]; then
-    sudo gem install colored
-    sudo gem install -n /usr/local/bin fastlane
+if [[ ! -e /opt/homebrew/bin/fastlane ]]; then
+    brew install fastlane
 else
     echo "You have installed fastlane"
 fi
