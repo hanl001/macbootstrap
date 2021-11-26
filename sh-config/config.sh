@@ -22,5 +22,12 @@ export JAVA_HOME="/Applications/Android Studio.app/Contents/jre/jdk/Contents/Hom
 # fzf
 export FZF_DEFAULT_OPTS="--height 40% --layout=reverse --preview '(highlight -O ansi {} || cat {}) 2> /dev/null | head -500'"
 
+# php
+export PATH="/opt/homebrew/opt/php@7.4/bin:$PATH"
+export PATH="/opt/homebrew/opt/php@7.4/sbin:$PATH"
+
+# ruby
+export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
+
 # key binder
 bindkey '^p' autosuggest-accept

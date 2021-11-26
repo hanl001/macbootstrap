@@ -35,3 +35,4 @@
 	process = git-lfs filter-process
 	required = true
 [commit]
+	template = /Users/hanling/.stCommitMsg
