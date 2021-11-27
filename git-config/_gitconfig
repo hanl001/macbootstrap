@@ -2,6 +2,7 @@
 	#templatedir = ~/.gitignore_global
 [core]
 	excludesfile = /Users/hanling/.gitignore_global
+	quotepath = false
 [alias]
 	st = status
 	cm = commit -am
