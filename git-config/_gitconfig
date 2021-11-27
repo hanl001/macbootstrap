@@ -1,20 +1,12 @@
-[init]
-	#templatedir = ~/.gitignore_global
 [core]
 	excludesfile = /Users/hanling/.gitignore_global
 	quotepath = false
 [alias]
 	st = status
 	cm = commit -am
-	rb = rebase
 	co = checkout
-	sb = submodule
-    p = push
-	pm = push origin master
-	pd = push origin dev
 	lg = log --all --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ci) %C(bold blue)<%an>%Creset' --abbrev-commit
-	d = difftool
-	sm = git branch --set-upstream-to=origin/master master
+	dv = difftool
 [diff]
 	tool = vimdiff
 [difftool]
