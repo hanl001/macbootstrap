@@ -1,0 +1,2 @@
+# set build timeout
+settings set plugin.process.gdb-remote.packet-timeout 300

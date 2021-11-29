@@ -32,8 +32,6 @@ exe_cmd "ln -sf ~/.macbootstrap/tool-config/ranger/rc.conf ~/.config/ranger/rc.c
 exe_cmd "ln -sf ~/.macbootstrap/tool-config/ranger/rifle.conf ~/.config/ranger/rifle.conf"
 exe_cmd "ln -sf ~/.macbootstrap/tool-config/ranger/scope.sh ~/.config/ranger/scope.sh"
 
+# link lldb config
+exe_cmd "ln -sf ~/.macbootstrap/tool-config/lldb/_lldbinit ~/.lldbinit"
 
-## link karabiner config
-#exe_cmd "ln -sf ~/.macbootstrap/tool-config/karabiner/karabiner.json ~/.config/karabiner/karabiner.json"
-#complex_file="assets/complex_modifications/1566201508.json"
-#exe_cmd "ln -sf ~/.macbootstrap/tool-config/karabiner/$complex_file ~/.config/karabiner/$complex_file"
