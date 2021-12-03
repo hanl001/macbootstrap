@@ -1,8 +1,12 @@
 # settings
-settings set plugin.process.gdb-remote.packet-timeout 300 # https://ratzr15.medium.com/lost-connection-to-the-debugger-db57f88e2d32
-settings set target.x86-disassembly-flavor intel # gdb style: https://stackoverflow.com/questions/9829136/setting-disassembly-flavour-to-intel-in-lldb
-settings set target.skip-prologue false # https://www.raywenderlich.com/books/advanced-apple-debugging-reverse-engineering/v3.0/chapters/12-assembly-memory
+## https://ratzr15.medium.com/lost-connection-to-the-debugger-db57f88e2d32
+settings set plugin.process.gdb-remote.packet-timeout 3000
+## gdb style: https://stackoverflow.com/questions/9829136/setting-disassembly-flavour-to-intel-in-lldb
+settings set target.x86-disassembly-flavor intel 
+## https://www.raywenderlich.com/books/advanced-apple-debugging-reverse-engineering/v3.0/chapters/12-assembly-memory
+settings set target.skip-prologue false
 
 # pretty json
 command regex pjson 's/(.+)/po NSString.init(data: try! JSONSerialization.data(withJSONObject: try! JSONSerialization.jsonObject(with: %1, options: []), options: [.prettyPrinted]), encoding: String.Encoding.utf8.rawValue)!/'
 
+command script import /opt/homebrew/opt/chisel/libexec/fbchisellldb.py
