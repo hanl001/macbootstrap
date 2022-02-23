@@ -1,4 +1,10 @@
 function setup() {
+    exe_cmd "setup_mac_config"
+    exe_cmd "install"
+    exe_cmd "link"
+}
+
+function setup_mac_config() {
     xcode-select --install
     # 禁用文字自动更正
     defaults write -g NSAutomaticQuoteSubstitutionEnabled -bool false

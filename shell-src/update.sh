@@ -1,5 +1,5 @@
 function update {
-    cd ~/.macbootstrap
+    cd $MACBOOTSTRAP_ROOT
     git stash
     git pull -r
     git stash pop

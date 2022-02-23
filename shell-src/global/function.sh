@@ -1,3 +1,14 @@
+function hl() {
+    if [ "$1" = "tp" ]
+    then
+        echo change dir to $MACBOOTSTRAP_ROOT
+        cd $MACBOOTSTRAP_ROOT
+    else
+        sh $MACBOOTSTRAP_ROOT/manager.sh $action $2 $3 $4 $5 $6 $7 $8 $9
+    fi
+
+}
+
 function hs() {
    emulate -L zsh
    local message=$1
@@ -7,8 +18,4 @@ function hs() {
    awk '{$1="";print "function " NR "() {" $0 "; echo \": $(date +%s):0;"$0"\" >> ~/.histfile }"}' | 
    {while read line; do eval $line &>/dev/null; done}
    cat ~/.histfile_color_result | sed '1!G;h;$!d' 
-}
-
-function hl() {
-    sh ~/.macbootstrap/manager.sh $1 $2 $3 $4 $5 $6 $7 $8 $9
 }

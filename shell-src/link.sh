@@ -1,7 +1,7 @@
 function link() {
     # link git config
     exe_cmd "ln -sf $config_path/git-config/_gitconfig ~/.gitconfig"
-    exe_cmd "ln -sf ~/.macbootstrap/git-config/_gitignore_global ~/.gitignore_global"
+    exe_cmd "ln -sf $config_path/git-config/_gitignore_global ~/.gitignore_global"
     
     # link shell config
     exe_cmd "ln -sf $config_path/sh-config/_zshrc ~/.zshrc"
