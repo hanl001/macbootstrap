@@ -29,6 +29,8 @@ function help() {
         update                    update config
 
         link                      link all config
+
+        to_xcode_snippets_path    to xcode snippets path
         
         help                      show this help message and exit
 

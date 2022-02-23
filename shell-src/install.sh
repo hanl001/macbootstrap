@@ -1,4 +1,12 @@
 function install() {
+    exe_cmd "check_brew"
+    exe_cmd "check_oh_myzsh"
+    exe_cmd "check_vim_anywhere"
+    exe_cmd "check_xcode_snippets"
+    exe_cmd "check_others"
+}
+
+function check_brew() {
     if [[ ! -e /opt/homebrew/bin/brew ]]; then
         /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
     else
@@ -65,15 +73,6 @@ function install() {
         echo "You have installed ranger"
     fi
     
-    if [[ ! -e /usr/local/bin/imgcat ]]; then
-        cd /usr/local/bin
-        wget https://raw.githubusercontent.com/gnachman/iTerm2/master/tests/imgcat
-        chmod +x imgcat
-        cd -
-    else
-        echo "You have installed imgcat"
-    fi
-    
     if [[ ! -e /opt/homebrew/bin/pod ]]; then
         brew install cocoapods
     else
@@ -85,17 +84,13 @@ function install() {
     else
         echo "You have installed fastlane"
     fi
-    
+}
+
+function check_oh_myzsh() {
     if [[ ! -e ~/.oh-my-zsh ]]; then
         sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
     else
         echo "You have downloaded oh my zsh"
-    fi
-    
-    if [[ ! -e ~/Library/Developer/Xcode/UserData/CodeSnippets ]]; then
-        git clone https://github.com/hanl001/CodeSnippets.git ~/Library/Developer/Xcode/UserData/CodeSnippets
-    else
-        echo "You have cloned xcode code snippets"
     fi
     
     if [[ ! -e ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions ]]; then
@@ -109,11 +104,37 @@ function install() {
     else
         echo "You have cloned zsh syntax highlighting"
     fi
-    
+}
+
+function check_vim_anywhere() {
     if [[ ! -e ~/.vim_anywhere ]]; then
         git clone git@github.com:hanl001/vim_anywhere.git ~/.vim_anywhere
         bash ~/.vim_anywhere/setup.sh
     else
         echo "You have installed vim_anywhere"
     fi
+}
+
+function check_others() {
+    if [[ ! -e /usr/local/bin/imgcat ]]; then
+        cd /usr/local/bin
+        wget https://raw.githubusercontent.com/gnachman/iTerm2/master/tests/imgcat
+        chmod +x imgcat
+        cd -
+    else
+        echo "You have installed imgcat"
+    fi
+}
+
+function check_xcode_snippets() {
+    if [[ ! -e ~/Library/Developer/Xcode/UserData/CodeSnippets ]]; then
+        git clone https://github.com/hanl001/CodeSnippets.git ~/Library/Developer/Xcode/UserData/CodeSnippets
+    else
+        echo "You have cloned xcode code snippets"
+    fi
+}
+
+function to_xcode_snippets_path() {
+    check_xcode_snippets
+    exe_cmd "cd ~/Library/Developer/Xcode/UserData/CodeSnippets"
 }
