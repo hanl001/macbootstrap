@@ -8,3 +8,7 @@ function hs() {
    {while read line; do eval $line &>/dev/null; done}
    cat ~/.histfile_color_result | sed '1!G;h;$!d' 
 }
+
+function hl() {
+    sh ~/.macbootstrap/manager.sh $1 $2 $3 $4 $5 $6 $7 $8 $9
+}

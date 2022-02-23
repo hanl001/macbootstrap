@@ -11,7 +11,7 @@ plugins=(autojump colored-man-pages extract zsh-autosuggestions zsh-syntax-highl
 source $ZSH/oh-my-zsh.sh
 
 # must add for macbootstrap
-source $HOME/.macbootstrap/root.sh
+source $HOME/.macbootstrap/source.sh
 
 # Config For Bongmi-iOS Project
 bongmi_ios_root_path=/Users/hanling/git/bongmi-ios
