@@ -4,7 +4,7 @@ function hl() {
         echo change dir to $MACBOOTSTRAP_ROOT
         cd $MACBOOTSTRAP_ROOT
     else
-        sh $MACBOOTSTRAP_ROOT/manager.sh $action $2 $3 $4 $5 $6 $7 $8 $9
+        sh $MACBOOTSTRAP_ROOT/manager.sh $1 $2 $3 $4 $5 $6 $7 $8 $9
     fi
 
 }
