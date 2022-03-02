@@ -1,12 +1,11 @@
 function hl() {
-    if [ "$1" = "tp" ]
+    if [ "$1" = "td" ]
     then
         echo change dir to $MACBOOTSTRAP_ROOT
         cd $MACBOOTSTRAP_ROOT
     else
         sh $MACBOOTSTRAP_ROOT/manager.sh $1 $2 $3 $4 $5 $6 $7 $8 $9
     fi
-
 }
 
 function hs() {
