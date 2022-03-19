@@ -27,8 +27,8 @@ function link_ranger() {
 }
 
 function link_vim() {
-    exe_cmd "ln -sf $config_path/vim-config/vimfiles $HOME/.vim"
-    exe_cmd "ln -sf $config_path/vim-config/_vimrc $HOME/.vimrc"
+    exe_cmd "ln -sf $config_path/vim-config/vimfiles ~/.vim"
+    exe_cmd "ln -sf $config_path/vim-config/_vimrc ~/.vimrc"
     exe_cmd "ln -sf $config_path/vim-config/nvim/init.vim ~/.config/nvim/init.vim"
 
     if [ ! -d "$config_path/vim-config/vimfiles/bundle/Vundle.vim" ]; then
