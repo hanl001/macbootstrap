@@ -122,7 +122,6 @@ syntax enable "Enable syntax hl
 
 "set guioptions-=T
 set t_Co=256
-colorscheme my_color
 set background=dark
 
 set nu
