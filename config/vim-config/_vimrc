@@ -469,7 +469,14 @@ nmap <leader>e :e .
 nmap <leader>q :wqa!
 
 " for fzf
-nmap <C-p> :Files %:p:h<CR>
+function! s:find_git_root()
+  return system('git rev-parse --show-toplevel 2> /dev/null')[:-2]
+endfunction
+
+command! ProjectFiles execute 'Files' s:find_git_root()
+
+nmap <C-p> :ProjectFiles<CR>
+" nmap <C-p> :Files %:p:h<CR>
 nmap <leader>b :Buffers<cr>
 
 " for NERDTreeFind

@@ -1,9 +1,9 @@
 function link() {
-    link_git
-    link_shell
-    link_ranger
-    link_vim
-    link_lldb
+    exe_cmd "link_git"
+    exe_cmd "link_shell"
+    exe_cmd "link_ranger"
+    exe_cmd "link_vim"
+    exe_cmd "link_lldb"
 }
 
 function link_git() {

@@ -13,27 +13,54 @@ source $shell_src_path/base.sh
 source $shell_src_path/setup.sh
 source $shell_src_path/install.sh
 source $shell_src_path/update.sh
+source $shell_src_path/path.sh
 source $shell_src_path/link.sh
 
 function help() {
 	cat <<-EOF
 
-	Usage: manager.sh [options]
+	Usage: hl [options]
 
 	Valid options are:
 
-        setup                     setup all config about mac
 
-        install                   check and install all tools
+    * about set up my mac
+    
+            setup                     automatically configure a new mac
+            setup_mac_config          set all mac system configs
+    
 
-        update                    update config
+    * about check and install tools
+    
+            install                   check and install all tools
+            check_brew                check brew and tools installed with brew
+            check_oh_myzsh            check oh-my-zsh and some tools
+            check_vim                 check vim env
+            check_xcode_snippets      check xcode snippets
+            check_others              check other tools that cannot be installed using brew
+            update                    sync macbootstrap from remote and update on-my-zsh
+    
+    
+    * about link configs
+    
+            link                      link all configs
+            link_git                  link git configs
+            link_shell                link shell configs
+            link_ranger               link ranger configs
+            link_vim                  link vim configs and check Plugins
+            link_lldb                 links lldb configs
+    
 
-        link                      link all config
-
-        to_xcode_snippets_path    to xcode snippets path
-        
-        help                      show this help message and exit
-
+    * about quick location path
+    
+            tm                        jump to macbootstrap path
+            txs                       jump to xcode snippets path
+    
+            
+    * others 
+    
+            help                      show this help message and exit
+    
 	EOF
 }
 

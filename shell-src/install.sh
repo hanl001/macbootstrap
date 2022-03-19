@@ -138,8 +138,3 @@ function check_xcode_snippets() {
         echo "You have cloned xcode code snippets"
     fi
 }
-
-function to_xcode_snippets_path() {
-    check_xcode_snippets
-    exe_cmd "cd ~/Library/Developer/Xcode/UserData/CodeSnippets"
-}
