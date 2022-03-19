@@ -16,6 +16,18 @@ source $shell_src_path/update.sh
 source $shell_src_path/path.sh
 source $shell_src_path/link.sh
 
+function _get_full_command() {
+    short=" t:test,
+    tm:to_macbootstrap_path,
+    txs:to_xcode_snippets_path"
+    full=$(expr "$short" : ".* $1:\([^,]*\),.*")
+    if [ ! $full ]
+    then
+        full=$1
+    fi
+    echo $full
+}
+
 function help() {
 	cat <<-EOF
 

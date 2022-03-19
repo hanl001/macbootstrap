@@ -18,6 +18,7 @@ curl https://raw.githubusercontent.com/hanl001/macbootstrap/master/setup.sh | sh
 
 # Useful command
 
+* `hl`:     some commands to manage this project
 * `x`:      zip or unzip anyfile
 * `j`:      autojump to anywhere
 * `ranger`: finder at iterm

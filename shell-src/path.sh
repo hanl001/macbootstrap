@@ -1,15 +1,7 @@
-function tm() {
-    _to_project_path
+function get_project_path() {
+    echo $project_path
 }
 
-function txs() {
-    _to_xcode_snippets_path
-}
-
-function _to_project_path() {
-    exe_cmd "cd $project_path"
-}
-
-function _to_xcode_snippets_path() {
-    exe_cmd "cd ~/Library/Developer/Xcode/UserData/CodeSnippets"
+function get_xcode_snippets_path() {
+    echo "~/Library/Developer/Xcode/UserData/CodeSnippets"
 }

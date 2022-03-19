@@ -1,5 +1,17 @@
 function hl() {
-    sh $MACBOOTSTRAP_ROOT/manager.sh $1 $2 $3 $4 $5 $6 $7 $8 $9
+    command=`sh $MACBOOTSTRAP_ROOT/manager.sh _get_full_command "$1"`
+    if [ "$command" = "to_xcode_snippets_path" ]
+    then
+        project_path=`sh $MACBOOTSTRAP_ROOT/manager.sh get_project_path`
+        echo change dir to $project_path
+        cd $project_path
+    elif [ "$command" = "to_macbootstrap_path" ]
+    then
+        echo change dir to $MACBOOTSTRAP_ROOT
+        cd $MACBOOTSTRAP_ROOT
+    else
+        sh $MACBOOTSTRAP_ROOT/manager.sh $1 $2 $3 $4 $5 $6 $7 $8 $9
+    fi
 }
 
 function hs() {
