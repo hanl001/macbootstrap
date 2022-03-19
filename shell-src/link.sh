@@ -2,7 +2,7 @@ function link() {
     link_git
     link_shell
     link_ranger
-    link_nvim
+    link_vim
     link_lldb
 }
 
@@ -26,8 +26,15 @@ function link_ranger() {
     exe_cmd "ln -sf $config_path/tool-config/ranger/scope.sh ~/.config/ranger/scope.sh"
 }
 
-function link_nvim() {
-    exe_cmd "ln -sf $config_path/tool-config/nvim/init.vim ~/.config/nvim/init.vim"
+function link_vim() {
+    exe_cmd "ln -sf $config_path/vim-config/vimfiles $HOME/.vim"
+    exe_cmd "ln -sf $config_path/vim-config/_vimrc $HOME/.vimrc"
+    exe_cmd "ln -sf $config_path/vim-config/nvim/init.vim ~/.config/nvim/init.vim"
+
+    if [ ! -d "$config_path/vim-config/vimfiles/bundle/Vundle.vim" ]; then
+        exe_cmd "git clone https://github.com/VundleVim/Vundle.vim.git $config_path/vim-config/vimfiles/bundle/Vundle.vim"
+        exe_cmd 'vim +PluginInstall +qall'
+    fi
 }
 
 function link_lldb() {

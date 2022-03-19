@@ -1,7 +1,7 @@
 function install() {
     exe_cmd "check_brew"
     exe_cmd "check_oh_myzsh"
-    exe_cmd "check_vim_anywhere"
+    exe_cmd "check_vim"
     exe_cmd "check_xcode_snippets"
     exe_cmd "check_others"
 }
@@ -84,12 +84,6 @@ function check_brew() {
     else
         echo "You have installed fastlane"
     fi
-     
-    if [[ ! -e /opt/homebrew/bin/nvim ]]; then
-        brew install neovim
-    else
-        echo "You have installed neovim"
-    fi
 }
 
 function check_oh_myzsh() {
@@ -112,12 +106,11 @@ function check_oh_myzsh() {
     fi
 }
 
-function check_vim_anywhere() {
-    if [[ ! -e ~/.vim_anywhere ]]; then
-        git clone git@github.com:hanl001/vim_anywhere.git ~/.vim_anywhere
-        bash ~/.vim_anywhere/setup.sh
+function check_vim() {
+    if [[ ! -e /opt/homebrew/bin/nvim ]]; then
+        brew install neovim
     else
-        echo "You have installed vim_anywhere"
+        echo "You have installed neovim"
     fi
 
     if [[ ! -e ~/.config/nvim/pack/github/start/copilot.vim ]]; then
@@ -125,7 +118,6 @@ function check_vim_anywhere() {
     else
         echo "You have installed copilot"
     fi
-
 }
 
 function check_others() {
