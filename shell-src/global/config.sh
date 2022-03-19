@@ -29,5 +29,8 @@ export PATH="/opt/homebrew/opt/php@7.4/sbin:$PATH"
 # ruby
 export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
 
+# umi
+export PATH="$PATH:`yarn global bin`"
+
 # key binder
 bindkey '^p' autosuggest-accept

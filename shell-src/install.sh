@@ -84,6 +84,12 @@ function check_brew() {
     else
         echo "You have installed fastlane"
     fi
+     
+    if [[ ! -e /opt/homebrew/bin/nvim ]]; then
+        brew install neovim
+    else
+        echo "You have installed neovim"
+    fi
 }
 
 function check_oh_myzsh() {

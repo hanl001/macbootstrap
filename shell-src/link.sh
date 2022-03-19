@@ -1,21 +1,35 @@
 function link() {
-    # link git config
+    link_git
+    link_shell
+    link_ranger
+    link_nvim
+    link_lldb
+}
+
+function link_git() {
     exe_cmd "ln -sf $config_path/git-config/_gitconfig ~/.gitconfig"
     exe_cmd "ln -sf $config_path/git-config/_gitignore_global ~/.gitignore_global"
-    
-    # link shell config
+}
+
+function link_shell() {
     exe_cmd "ln -sf $config_path/sh-config/_zshrc ~/.zshrc"
     exe_cmd "ln -sf $config_path/sh-config/_bashrc ~/.bashrc"
-    exe_cmd "ln -sf $config_path/sh-config/_bash_profile ~/.bash_profile" 
+    exe_cmd "ln -sf $config_path/sh-config/_bash_profile ~/.bash_profile"
     exe_cmd "ln -sf $config_path/sh-config/_inputrc ~/.inputrc"
-    
-    # link ranger config
+}
+
+function link_ranger() {
     exe_cmd "ln -sf $config_path/tool-config/ranger/commands.py ~/.config/ranger/commands.py"
     exe_cmd "ln -sf $config_path/tool-config/ranger/commands_full.py ~/.config/ranger/commands_full.py"
     exe_cmd "ln -sf $config_path/tool-config/ranger/rc.conf ~/.config/ranger/rc.conf"
     exe_cmd "ln -sf $config_path/tool-config/ranger/rifle.conf ~/.config/ranger/rifle.conf"
     exe_cmd "ln -sf $config_path/tool-config/ranger/scope.sh ~/.config/ranger/scope.sh"
-    
-    # link lldb config
+}
+
+function link_nvim() {
+    exe_cmd "ln -sf $config_path/tool-config/nvim/init.vim ~/.config/nvim/init.vim"
+}
+
+function link_lldb() {
     exe_cmd "ln -sf $config_path/tool-config/lldb/_lldbinit ~/.lldbinit"
 }
