@@ -119,6 +119,13 @@ function check_vim_anywhere() {
     else
         echo "You have installed vim_anywhere"
     fi
+
+    if [[ ! -e ~/.config/nvim/pack/github/start/copilot.vim ]]; then
+        exe_cmd "git clone https://github.com/github/copilot.vim.git ~/.config/nvim/pack/github/start/copilot.vim"
+    else
+        echo "You have installed copilot"
+    fi
+
 }
 
 function check_others() {
