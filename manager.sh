@@ -20,10 +20,10 @@ function _get_full_command() {
     short=" t:test,
     tm:to_macbootstrap_path,
     txs:to_xcode_snippets_path"
-    full=$(expr "$short" : ".* $1:\([^,]*\),.*")
+    full=$(expr "$short" : ".* $2:\([^,]*\),.*")
     if [ ! $full ]
     then
-        full=$1
+        full=$2
     fi
     echo $full
 }
