@@ -3,7 +3,6 @@ function install() {
     exe_cmd "check_oh_myzsh"
     exe_cmd "check_vim"
     exe_cmd "check_xcode_snippets"
-    exe_cmd "check_others"
 }
 
 function check_brew() {
@@ -84,6 +83,12 @@ function check_brew() {
     else
         echo "You have installed fastlane"
     fi
+    
+    if [[ ! -e /opt/homebrew/bin/imgcat ]]; then
+        brew install danielgatis/imgcat/imgcat
+    else
+        echo "You have installed imgcat"
+    fi
 }
 
 function check_oh_myzsh() {
@@ -117,17 +122,6 @@ function check_vim() {
         exe_cmd "git clone https://github.com/github/copilot.vim.git ~/.config/nvim/pack/github/start/copilot.vim"
     else
         echo "You have installed copilot"
-    fi
-}
-
-function check_others() {
-    if [[ ! -e /usr/local/bin/imgcat ]]; then
-        cd /usr/local/bin
-        wget https://raw.githubusercontent.com/gnachman/iTerm2/master/tests/imgcat
-        chmod +x imgcat
-        cd -
-    else
-        echo "You have installed imgcat"
     fi
 }
 

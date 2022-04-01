@@ -19,6 +19,7 @@ function link_shell() {
 }
 
 function link_ranger() {
+    exe_cmd "mkdir -p ~/.config/ranger"
     exe_cmd "ln -sf $config_path/tool-config/ranger/commands.py ~/.config/ranger/commands.py"
     exe_cmd "ln -sf $config_path/tool-config/ranger/commands_full.py ~/.config/ranger/commands_full.py"
     exe_cmd "ln -sf $config_path/tool-config/ranger/rc.conf ~/.config/ranger/rc.conf"
