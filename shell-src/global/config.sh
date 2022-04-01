@@ -11,7 +11,7 @@ export PATH="$PATH:$HOME/flutter/bin"
 export PATH="$PATH:$HOME/phabricator/arcanist/bin"
 
 # cargo env
-export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="$PATH:$HOME/.cargo/bin"
 
 # java home
 export JAVA_HOME="/Applications/Android Studio.app/Contents/jre/jdk/Contents/Home"
@@ -23,11 +23,11 @@ export JAVA_HOME="/Applications/Android Studio.app/Contents/jre/jdk/Contents/Hom
 export FZF_DEFAULT_OPTS="--height 40% --layout=reverse --preview '(highlight -O ansi {} || cat {}) 2> /dev/null | head -500'"
 
 # php
-export PATH="/opt/homebrew/opt/php@7.4/bin:$PATH"
-export PATH="/opt/homebrew/opt/php@7.4/sbin:$PATH"
+export PATH="$PATH:/opt/homebrew/opt/php@7.4/bin"
+export PATH="$PATH:/opt/homebrew/opt/php@7.4/sbin"
 
 # ruby
-export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
+export PATH="$PATH:/opt/homebrew/opt/ruby/bin"
 
 # umi
 export PATH="$PATH:`yarn global bin`"

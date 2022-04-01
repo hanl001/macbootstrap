@@ -5,7 +5,7 @@ function setup() {
 }
 
 function setup_mac_config() {
-    xcode-select --install
+    xcode-select --install | true
     # 禁用文字自动更正
     defaults write -g NSAutomaticQuoteSubstitutionEnabled -bool false
     defaults write -g NSAutomaticDashSubstitutionEnabled -bool false
