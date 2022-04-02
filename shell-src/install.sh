@@ -125,6 +125,15 @@ function check_vim() {
     fi
 }
 
+function reinstall_xcode_snippets() {
+    if [[ ! -e ~/Library/Developer/Xcode/UserData/CodeSnippets ]]; then
+        git clone https://github.com/hanl001/CodeSnippets.git ~/Library/Developer/Xcode/UserData/CodeSnippets
+    else
+        exe_cmd "rm -rf ~/Library/Developer/Xcode/UserData/CodeSnippets"
+        git clone https://github.com/hanl001/CodeSnippets.git ~/Library/Developer/Xcode/UserData/CodeSnippets
+    fi
+}
+
 function check_xcode_snippets() {
     if [[ ! -e ~/Library/Developer/Xcode/UserData/CodeSnippets ]]; then
         git clone https://github.com/hanl001/CodeSnippets.git ~/Library/Developer/Xcode/UserData/CodeSnippets
