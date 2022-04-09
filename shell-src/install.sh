@@ -127,17 +127,22 @@ function check_vim() {
 
 function reinstall_xcode_snippets() {
     if [[ ! -e ~/Library/Developer/Xcode/UserData/CodeSnippets ]]; then
-        git clone https://github.com/hanl001/CodeSnippets.git ~/Library/Developer/Xcode/UserData/CodeSnippets
+        git clone git@github.com:hanl001/CodeSnippets.git ~/Library/Developer/Xcode/UserData/CodeSnippets
     else
-        exe_cmd "rm -rf ~/Library/Developer/Xcode/UserData/CodeSnippets"
-        git clone https://github.com/hanl001/CodeSnippets.git ~/Library/Developer/Xcode/UserData/CodeSnippets
+        exe_cmd "mv ~/Library/Developer/Xcode/UserData/CodeSnippets ~/Library/Developer/Xcode/UserData/CodeSnippets.bak"
+        git clone git@github.com:hanl001/CodeSnippets.git ~/Library/Developer/Xcode/UserData/CodeSnippets
     fi
 }
 
 function check_xcode_snippets() {
     if [[ ! -e ~/Library/Developer/Xcode/UserData/CodeSnippets ]]; then
-        git clone https://github.com/hanl001/CodeSnippets.git ~/Library/Developer/Xcode/UserData/CodeSnippets
+        git clone git@github.com:hanl001/CodeSnippets.git ~/Library/Developer/Xcode/UserData/CodeSnippets
     else
         echo "You have cloned xcode code snippets"
+        cd ~/Library/Developer/Xcode/UserData/CodeSnippets
+        git add --all
+        git stash
+        git pull -r
+        git stash pop
     fi
 }

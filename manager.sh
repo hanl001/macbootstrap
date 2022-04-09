@@ -18,8 +18,11 @@ source $shell_src_path/link.sh
 
 function _get_full_command() {
     short=" t:test,
+    tx:to_xcode_snippets_path,
     tm:to_macbootstrap_path,
-    txs:to_xcode_snippets_path"
+    l:link,
+    i:install,
+    u:update"
     full=$(expr "$short" : ".* $2:\([^,]*\),.*")
     if [ ! $full ]
     then
@@ -66,7 +69,7 @@ function help() {
     * about quick location path
     
             tm                        jump to macbootstrap path
-            txs                       jump to xcode snippets path
+            tx                        jump to xcode snippets path
     
             
     * others 

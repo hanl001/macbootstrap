@@ -2,7 +2,7 @@ function hl() {
     command=`sh $MACBOOTSTRAP_ROOT/manager.sh _get_full_command "$1"`
     if [ "$command" = "to_xcode_snippets_path" ]
     then
-        project_path=`sh $MACBOOTSTRAP_ROOT/manager.sh get_project_path`
+        project_path=`sh $MACBOOTSTRAP_ROOT/manager.sh get_xcode_snippets_path`
         echo change dir to $project_path
         cd $project_path
     elif [ "$command" = "to_macbootstrap_path" ]

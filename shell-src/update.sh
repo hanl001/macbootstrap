@@ -1,4 +1,4 @@
-function update {
+function update() {
     cd $MACBOOTSTRAP_ROOT
     git stash
     git pull -r
