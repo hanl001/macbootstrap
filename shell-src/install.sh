@@ -89,6 +89,18 @@ function check_brew() {
     else
         echo "You have installed imgcat"
     fi
+    
+    if [[ ! -e /opt/homebrew/bin/chisel ]]; then
+        brew install chisel
+    else
+        echo "You have installed chisel"
+    fi
+    
+    if [[ ! -e /opt/homebrew/bin/php@7.4 ]]; then
+        brew install php@7.4
+    else
+        echo "You have installed php@7.4"
+    fi
 }
 
 function check_oh_myzsh() {

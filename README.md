@@ -8,15 +8,15 @@ custom by myself
 
 # How to install
 
-First make sure ssh-keygen and xcode command tool
+1. First make sure ssh-keygen and xcode command tool
 
-Just execute:
+2. Just execute:
 
 ```shell
 curl https://raw.githubusercontent.com/hanl001/macbootstrap/master/setup.sh | sh
 ```
 
-# Useful command
+# Useful command (see more at: shell-src/global/*.sh)
 
 * `hl`:     some commands to manage this project
 * `x`:      zip or unzip anyfile
@@ -36,10 +36,27 @@ curl https://raw.githubusercontent.com/hanl001/macbootstrap/master/setup.sh | sh
 * `vf`:     vim fzf find
 * `ssh -A`: ssh-agent with local id_rsa
 
-# About git
+# About git (see more at: _gitconfig)
 * `git st`: git status
 * `git cm`: git commit -am
 * `git co`: git checkout
 * `git lg`: beauty git log
 * `git dv`: git difftool use vim
+
+# About vim (see more at: config/vim-config/*)
+|keys| usage|
+|---|---|
+|`ctrl + p` | use fzf search files |
+|`ctrl + n` | toggle right dir tree |
+|`wm`       | toggle left window |
+|`,f`       |   go to first window  |
+|`,sp`      | :set paste            |
+|`,snp`     |  `:set nopaste`       |
+
+# About lldb 
+* `pjson`: pretty json print
+* all command at [chisel](https://github.com/facebook/chisel)
+
+# About ranger (see more at: config/tool-config/ranger/*)
+* j: use autojump to anywhere
 
