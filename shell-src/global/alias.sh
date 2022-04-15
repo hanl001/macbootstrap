@@ -1,7 +1,6 @@
 alias vim='nvim'
 alias pud='pod update'
 alias pin='pod install'
-alias pud='pod update'
 alias soundoff='sudo nvram SystemAudioVolume=%80'
 alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
 alias o='open'
