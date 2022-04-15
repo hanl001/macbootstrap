@@ -46,12 +46,15 @@ curl https://raw.githubusercontent.com/hanl001/macbootstrap/master/setup.sh | sh
 # About vim (see more at: config/vim-config/*)
 |keys| usage|
 |---|---|
-|`ctrl + p` | use fzf search files |
-|`ctrl + n` | toggle right dir tree |
-|`wm`       | toggle left window |
-|`,f`       |   go to first window  |
-|`,sp`      | :set paste            |
-|`,snp`     |  `:set nopaste`       |
+|`ctrl + p`        | use fzf search files       |
+|`ctrl + n`        | toggle right dir tree      |
+|`wm`              | toggle left window         |
+|`ctrl + h/j/k/l`  | move at windows            |
+|`,r`              | to replace selected words  |
+|`,f`              | go to first window         |
+|`,sp`             | :set paste                 |
+|`,snp`            | `:set nopaste`             |
+|`[SPACE]`         | `/`                        |
 
 # About lldb 
 * `pjson`: pretty json print
