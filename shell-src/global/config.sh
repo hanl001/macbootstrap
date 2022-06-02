@@ -34,3 +34,6 @@ export PATH="$PATH:`yarn global bin`"
 
 # key binder
 bindkey '^p' autosuggest-accept
+
+SKETCH=$(mdfind kMDItemCFBundleIdentifier=='com.bohemiancoding.sketch3' | head -n 1)
+export PATH="$PATH:/Applications/Sketch.app/Contents/Resources/sketchtool/bin"
