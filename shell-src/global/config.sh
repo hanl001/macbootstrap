@@ -5,7 +5,7 @@
 export PATH="$PATH:$HOME/.rvm/bin"
 
 # flutter env
-export PATH="$PATH:$HOME/flutter/bin"
+export PATH="$PATH:$MACBOOTSTRAP_ROOT/command/flutter/bin"
 
 # arc env
 export PATH="$PATH:$MACBOOTSTRAP_ROOT/command/phabricator/arcanist/bin"

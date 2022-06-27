@@ -3,6 +3,7 @@ function install() {
     exe_cmd "check_oh_myzsh"
     exe_cmd "check_vim"
     exe_cmd "check_xcode_snippets"
+    exe_cmd "check_applications"
 }
 
 function check_brew() {
@@ -162,5 +163,37 @@ function check_xcode_snippets() {
         git stash
         git pull -r
         git stash pop
+    fi
+}
+
+function check_applications() {
+    if [[ ! -e /Applications/SourceTree.app ]]; then
+        brew cask install sourcetree
+    else
+        echo "You have installed SourceTree"
+    fi
+    
+    if [[ ! -e /Applications/WeChat.app ]]; then
+        brew cask install wechat
+    else
+        echo "You have installed WeChat"
+    fi
+    
+    if [[ ! -e /Applications/Google\ Chrome.app ]]; then
+        brew cask install google-chrome
+    
+        # Set Chrome as default browser
+        git clone https://github.com/kerma/defaultbrowser ./temp/defaultbrowser
+        (cd ./temp/defaultbrowser && make && make install)
+        defaultbrowser chrome
+        [[ -d ./temp/defaultbrowser ]] && rm -rf ./temp/defaultbrowser
+    else
+        echo "You have installed chrome"
+    fi
+    
+    if [[ ! -e /Applications/Visual\ Studio\ Code.app ]]; then
+        brew cask install visual-studio-code
+    else
+        echo "You have installed vscode"
     fi
 }
