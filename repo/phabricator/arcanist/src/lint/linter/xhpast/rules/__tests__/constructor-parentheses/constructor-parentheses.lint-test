@@ -1,0 +1,16 @@
+<?php
+
+new Foo;
+new Bar();
+new Foo\Bar;
+new class {};
+~~~~~~~~~~
+advice:3:5:XHP49:Constructor Parentheses
+advice:5:5:XHP49:Constructor Parentheses
+~~~~~~~~~~
+<?php
+
+new Foo();
+new Bar();
+new Foo\Bar();
+new class {};
