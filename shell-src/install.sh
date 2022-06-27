@@ -103,16 +103,10 @@ function check_brew() {
         brew install aria2
     fi
     
-    if [[ ! -e /opt/homebrew/bin/aria2 ]]; then
-        brew install aria2
-    else
-        echo "You have installed aria2"
-    fi
-    
-    if [[ ! -e /opt/homebrew/bin/php@7.4 ]]; then
-        brew install php@7.4
-    else
+    if brew ls --versions php@7.4 > /dev/null; then
         echo "You have installed php@7.4"
+    else
+        brew install php@7.4
     fi
 }
 
