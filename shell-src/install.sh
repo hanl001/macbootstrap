@@ -91,10 +91,16 @@ function check_brew() {
         echo "You have installed imgcat"
     fi
     
-    if [[ ! -e /opt/homebrew/bin/chisel ]]; then
-        brew install chisel
-    else
+    if brew ls --versions chisel > /dev/null; then
         echo "You have installed chisel"
+    else
+        brew install chisel
+    fi
+    
+    if brew ls --versions aria2 > /dev/null; then
+        echo "You have installed aria2"
+    else
+        brew install aria2
     fi
     
     if [[ ! -e /opt/homebrew/bin/aria2 ]]; then
