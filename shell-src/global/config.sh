@@ -8,7 +8,7 @@ export PATH="$PATH:$HOME/.rvm/bin"
 export PATH="$PATH:$HOME/flutter/bin"
 
 # arc env
-export PATH="$PATH:$MACBOOTSTRAP_ROOT/repo/phabricator/arcanist/bin"
+export PATH="$PATH:$MACBOOTSTRAP_ROOT/command/phabricator/arcanist/bin"
 
 # cargo env
 export PATH="$PATH:$HOME/.cargo/bin"
