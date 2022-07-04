@@ -7,7 +7,14 @@ function link() {
 }
 
 function link_git() {
-    exe_cmd "ln -sf $config_path/git-config/_gitconfig ~/.gitconfig"
+    gitignore_source_path="$config_path/git-config/_gitconfig"
+    gitignore_target_path="$config_path/git-config/.gitconfig"
+
+    if [[ ! -e $gitignore_target_path ]]; then
+        exe_cmd "cp $gitignore_source_path $gitignore_target_path"
+    fi
+
+    exe_cmd "ln -sf $gitignore_target_path ~/.gitconfig"
     exe_cmd "ln -sf $config_path/git-config/_gitignore_global ~/.gitignore_global"
 }
 

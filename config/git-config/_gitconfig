@@ -1,5 +1,4 @@
 [core]
-	excludesfile = /Users/hanling/.gitignore_global
 	quotepath = false
 [alias]
 	st = status
@@ -12,8 +11,8 @@
 [difftool]
     cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 [user]
-	name = hanling
-	email = hanling1217@gmail.com
+	name = 
+	email = 
 [push]
 	default = simple
 [difftool "sourcetree"]
@@ -27,5 +26,3 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
-[commit]
-	template = /Users/hanling/.stCommitMsg
