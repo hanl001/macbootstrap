@@ -1,4 +1,4 @@
 .DS_Store
 config/vim-config/vimfiles/bundle/
 config/vim-config/vimfiles/vimfiles/
-config/git-config/.gitignore
+config/git-config/.gitconfig
