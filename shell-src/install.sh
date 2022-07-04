@@ -9,6 +9,10 @@ function install() {
 function check_brew() {
     if [[ ! -e /opt/homebrew/bin/brew ]]; then
         /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+        if [[ $(uname -m) == 'arm64' ]]; then
+            echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> $HOME/.zprofile
+            eval "$(/opt/homebrew/bin/brew shellenv)"
+        fi
     else
         echo "You have installed brew"
     fi
