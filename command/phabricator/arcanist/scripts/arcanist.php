@@ -261,6 +261,8 @@ try {
     }
   }
 
+  $reviewers = $configuration_manager->getConfigFromAllSources('phabricator.reviewers');
+
   if ($conduit_uri) {
     // Set the URI path to '/api/'. TODO: Originally, I contemplated letting
     // you deploy Phabricator somewhere other than the domain root, but ended
@@ -272,6 +274,7 @@ try {
     $conduit_uri = (string)$conduit_uri;
   }
   $workflow->setConduitURI($conduit_uri);
+  $workflow->setReviewers($reviewers);
 
   // Apply global CA bundle from configs.
   $ca_bundle = $configuration_manager->getConfigFromAnySource('https.cabundle');

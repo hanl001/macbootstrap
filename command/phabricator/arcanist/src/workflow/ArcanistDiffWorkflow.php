@@ -1599,6 +1599,10 @@ EOTEXT
       }
     }
 
+    $reviewers = array_shift($this->getReviewers());
+    $template = str_replace("Plan:", "Plan: N/A", $template);
+    $template = str_replace("Reviewers:", "Reviewers: $reviewers", $template);
+
     $old_message = $template;
 
     $included = array();

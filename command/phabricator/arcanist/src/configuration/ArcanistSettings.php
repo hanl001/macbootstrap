@@ -49,6 +49,14 @@ final class ArcanistSettings extends Phobject {
           'Associates this working copy with a specific installation of '.
           'Phabricator.'),
       ),
+      'phabricator.reviewers' => array(
+        'type' => 'string',
+        'legacy' => 'reviewers',
+        'example' => '"https://phabricator.mycompany.com/"',
+        'help' => pht(
+          'Associates this working copy with a specific installation of '.
+          'Phabricator.'),
+      ),
       'lint.engine' => array(
         'type' => 'string',
         'legacy' => 'lint_engine',

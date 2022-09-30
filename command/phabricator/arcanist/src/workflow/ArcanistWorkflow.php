@@ -43,6 +43,7 @@ abstract class ArcanistWorkflow extends Phobject {
 
   private $conduit;
   private $conduitURI;
+  private $reviewers;
   private $conduitCredentials;
   private $conduitAuthenticated;
   private $forcedConduitVersion;
@@ -138,6 +139,21 @@ abstract class ArcanistWorkflow extends Phobject {
     }
     $this->conduitURI = $conduit_uri;
     return $this;
+  }
+
+  final public function setReviewers($reviewers) {
+    if ($this->reviewers) {
+      throw new Exception(
+        pht(
+          'You can not change the Reviewers after a '.
+          'conduit is already open.'));
+    }
+    $this->reviewers = $reviewers;
+    return $this;
+  }
+
+  final public function getReviewers() {
+    return $this->reviewers;
   }
 
   /**
