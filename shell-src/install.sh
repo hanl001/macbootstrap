@@ -29,18 +29,6 @@ function check_brew() {
         echo "You have installed fzf"
     fi
     
-    if [[ ! -e /opt/homebrew/bin/tig ]]; then
-        brew install tig
-    else
-        echo "You have installed tig"
-    fi
-    
-    if [[ ! -e /opt/homebrew/bin/htop ]]; then
-        brew install htop
-    else
-        echo "You have installed htop"
-    fi
-    
     if [[ ! -e /opt/homebrew/bin/cmake ]]; then
         brew install cmake
     else
