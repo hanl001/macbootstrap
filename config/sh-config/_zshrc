@@ -14,5 +14,5 @@ source $ZSH/oh-my-zsh.sh
 source $HOME/.macbootstrap/shell-src/global/global.sh
 
 # Config For Bongmi-iOS Project
-bongmi_ios_root_path=/Users/hanling/git/bongmi-ios
-source /Users/hanling/git/bongmi-ios/devops/shell-src/bongmi_ios_config.sh
+bongmi_ios_root_path=/Users/hanling/git/root
+source /Users/hanling/git/root/devops/shell-src/bongmi_ios_config.sh
