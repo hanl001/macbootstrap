@@ -1,2 +1,1 @@
 # MARK: - linked empty file to reflect changes for .bashrc
-. "$HOME/.cargo/env"

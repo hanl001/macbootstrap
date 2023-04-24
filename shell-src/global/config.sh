@@ -39,3 +39,5 @@ SKETCH=$(mdfind kMDItemCFBundleIdentifier=='com.bohemiancoding.sketch3' | head -
 export PATH="$PATH:/Applications/Sketch.app/Contents/Resources/sketchtool/bin"
 
 eval "$(rbenv init - zsh)"
+
+export PATH="$PATH:/Users/hanling/.mint/bin"
