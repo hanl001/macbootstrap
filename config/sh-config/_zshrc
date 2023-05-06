@@ -15,7 +15,6 @@ source $HOME/.macbootstrap/shell-src/global/global.sh
 
 WESPY_FLUTTER_PATH=/Users/hanling/.macbootstrap/command/flutter/
 
-export JAVA_HOME=/Applications/Android\ Studio.app/Contents/jbr/Contents/Home
 # Config For Wepie-iOS Project
 source /Users/hanling/git/devops/shell-src/wepie_ios_config.sh
 wepie_ios_devops_path=/Users/hanling/git/devops
