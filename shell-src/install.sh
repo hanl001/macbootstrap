@@ -160,7 +160,7 @@ function check_xcode_snippets() {
 
 function check_applications() {
     if [[ ! -e /applications/sourcetree.app ]]; then
-        brew cask install sourcetree
+        brew install --cask sourcetree
     else
         echo "you have installed sourcetree"
     fi
