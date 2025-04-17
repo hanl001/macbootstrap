@@ -164,12 +164,6 @@ function check_applications() {
     else
         echo "you have installed sourcetree"
     fi
-
-    if [[ ! -e /applications/switchkey.app ]]; then
-        brew install --cask switchkey
-    else
-        echo "you have installed switchkey"
-    fi
     
     if [[ ! -e /applications/wechat.app ]]; then
         brew cask install wechat
