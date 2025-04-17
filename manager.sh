@@ -53,6 +53,7 @@ function help() {
             check_vim                 check vim env
             check_xcode_snippets      check xcode snippets
             check_others              check other tools that cannot be installed using brew
+            check_applications        check applications use brew cask
             update                    sync macbootstrap from remote and update on-my-zsh
     
     
