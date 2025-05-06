@@ -1,0 +1,12 @@
+# MARK: zsh 终端以及 ssh jenkins 都会加载这个文件, 基础环境放在这里更合适
+
+# brew
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# rbenv
+eval "$(rbenv init - zsh)"
+
+# pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"

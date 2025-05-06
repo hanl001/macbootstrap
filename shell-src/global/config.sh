@@ -1,14 +1,14 @@
 [[ -s "$HOME/.profile" ]] && source "$HOME/.profile" # Load the default .profile
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-
-export PATH="$PATH:$HOME/.rvm/bin"
-
 # flutter env
 export PATH="$PATH:$MACBOOTSTRAP_ROOT/command/flutter/bin"
 
-# arc env
-export PATH="$PATH:$MACBOOTSTRAP_ROOT/command/phabricator/arcanist/bin"
+## arc env
+#export PATH="$PATH:$MACBOOTSTRAP_ROOT/command/phabricator/arcanist/bin"
+#
+## php
+#export PATH="$PATH:/opt/homebrew/opt/php@7.4/bin"
+#export PATH="$PATH:/opt/homebrew/opt/php@7.4/sbin"
 
 # cargo env
 export PATH="$PATH:$HOME/.cargo/bin"
@@ -22,13 +22,6 @@ export JAVA_HOME="/Applications/Android Studio.app/Contents/jre/jdk/Contents/Hom
 # fzf
 export FZF_DEFAULT_OPTS="--height 40% --layout=reverse --preview '(highlight -O ansi {} || cat {}) 2> /dev/null | head -500'"
 
-# php
-export PATH="$PATH:/opt/homebrew/opt/php@7.4/bin"
-export PATH="$PATH:/opt/homebrew/opt/php@7.4/sbin"
-
-# ruby
-export PATH="$PATH:/opt/homebrew/opt/ruby/bin"
-
 # umi
 export PATH="$PATH:`yarn global bin`"
 
@@ -37,8 +30,6 @@ bindkey '^p' autosuggest-accept
 
 SKETCH=$(mdfind kMDItemCFBundleIdentifier=='com.bohemiancoding.sketch3' | head -n 1)
 export PATH="$PATH:/Applications/Sketch.app/Contents/Resources/sketchtool/bin"
-
-eval "$(rbenv init - zsh)"
 
 export PATH="$PATH:/Users/hanling/.mint/bin"
 
@@ -50,8 +41,3 @@ export LC_MESSAGES="C"
 
 export OHPM_HOME=/Users/hanling/git/command-line-tools/ohpm
 export PATH=${OHPM_HOME}/bin:${PATH}
-
-#pyenv
-export PYENV_ROOT="$HOME/.pyenv"
-command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"

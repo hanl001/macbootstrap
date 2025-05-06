@@ -22,6 +22,7 @@ function link_shell() {
     exe_cmd "ln -sf $config_path/sh-config/_zshrc ~/.zshrc"
     exe_cmd "ln -sf $config_path/sh-config/_bashrc ~/.bashrc"
     exe_cmd "ln -sf $config_path/sh-config/_bash_profile ~/.bash_profile"
+    exe_cmd "ln -sf $config_path/sh-config/_zprofile ~/.zprofile"
     exe_cmd "ln -sf $config_path/sh-config/_inputrc ~/.inputrc"
 }
 
