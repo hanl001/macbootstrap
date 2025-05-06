@@ -20,10 +20,13 @@ function link_git() {
 
 function link_shell() {
     exe_cmd "ln -sf $config_path/sh-config/_zshrc ~/.zshrc"
+    exe_cmd "ln -sf $config_path/sh-config/_zprofile ~/.zprofile"
+    exe_cmd "ln -sf $config_path/sh-config/_zshenv ~/.zshenv"
+
+    exe_cmd "ln -sf $config_path/sh-config/_inputrc ~/.inputrc"
+
     exe_cmd "ln -sf $config_path/sh-config/_bashrc ~/.bashrc"
     exe_cmd "ln -sf $config_path/sh-config/_bash_profile ~/.bash_profile"
-    exe_cmd "ln -sf $config_path/sh-config/_zprofile ~/.zprofile"
-    exe_cmd "ln -sf $config_path/sh-config/_inputrc ~/.inputrc"
 }
 
 function link_ranger() {
