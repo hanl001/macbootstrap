@@ -1,3 +1,6 @@
+settings set target.memory-module-load-level minimal
+settings set symbols.use-swift-clangimporter false
+
 # settings
 ## https://ratzr15.medium.com/lost-connection-to-the-debugger-db57f88e2d32
 settings set plugin.process.gdb-remote.packet-timeout 3000
