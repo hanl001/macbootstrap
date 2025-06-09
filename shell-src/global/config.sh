@@ -3,13 +3,6 @@
 # flutter env
 export PATH="$PATH:$MACBOOTSTRAP_ROOT/command/flutter/bin"
 
-## arc env
-#export PATH="$PATH:$MACBOOTSTRAP_ROOT/command/phabricator/arcanist/bin"
-#
-## php
-#export PATH="$PATH:/opt/homebrew/opt/php@7.4/bin"
-#export PATH="$PATH:/opt/homebrew/opt/php@7.4/sbin"
-
 # cargo env
 export PATH="$PATH:$HOME/.cargo/bin"
 
