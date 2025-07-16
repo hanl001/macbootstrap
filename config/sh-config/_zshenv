@@ -1,1 +1,7 @@
 . "$HOME/.cargo/env"
+
+# Config For Wepie-iOS Project
+export wepie_ios_devops_path=/Users/hanling/git/devops
+export wepie_ios_pods_path=/Users/hanling/git/weplay-ios-pods
+
+

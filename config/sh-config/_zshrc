@@ -13,9 +13,7 @@ source $ZSH/oh-my-zsh.sh
 # must add for macbootstrap
 source $HOME/.macbootstrap/shell-src/global/global.sh
 
-WESPY_FLUTTER_PATH=/Users/hanling/.macbootstrap/command/flutter/
-
-# Config For Wepie-iOS Project
-export wepie_ios_devops_path=/Users/hanling/git/devops
 source /Users/hanling/git/devops/shell-src/wepie_ios_config.sh
-export wepie_ios_pods_path=/Users/hanling/git/weplay-ios-pods
+
+export WESPY_FLUTTER_PATH=/Users/hanling/.macbootstrap/command/flutter/
+
