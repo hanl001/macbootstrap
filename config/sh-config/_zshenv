@@ -1,7 +1,15 @@
 . "$HOME/.cargo/env"
 
+source /Users/hanling/git/devops/shell-src/wepie_ios_config.sh
+
 # Config For Wepie-iOS Project
 export wepie_ios_devops_path=/Users/hanling/git/devops
 export wepie_ios_pods_path=/Users/hanling/git/weplay-ios-pods
 
 
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+
+# 敏感信息（GITHUB_TOKEN、各类 API key 等）从不入 git 的本地文件加载，
+# 模板见 config/sh-config/secrets.sh.example，真实值只写进下面这个文件。
+[ -f "$HOME/.config/macbootstrap/secrets.sh" ] && source "$HOME/.config/macbootstrap/secrets.sh"

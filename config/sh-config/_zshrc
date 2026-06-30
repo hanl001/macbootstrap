@@ -13,7 +13,11 @@ source $ZSH/oh-my-zsh.sh
 # must add for macbootstrap
 source $HOME/.macbootstrap/shell-src/global/global.sh
 
-source /Users/hanling/git/devops/shell-src/wepie_ios_config.sh
+# 密钥（GEMINI_API_KEY 等）请写进 ~/.config/macbootstrap/secrets.sh，
+# 由 _zshenv 统一加载，切勿明文写在被 git 跟踪的配置里。
 
-export WESPY_FLUTTER_PATH=/Users/hanling/.macbootstrap/command/flutter/
+. "$HOME/.local/bin/env"
+
+# Hermes Agent — ensure ~/.local/bin is on PATH
+export PATH="$HOME/.local/bin:$PATH"
 

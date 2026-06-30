@@ -21,7 +21,6 @@ curl https://raw.githubusercontent.com/hanl001/macbootstrap/master/setup.sh | sh
 * `hl`:     some commands to manage this project
 * `x`:      zip or unzip anyfile
 * `j`:      autojump to anywhere
-* `ranger`: finder at iterm
 * `pin`:    pod install
 * `pud`:    pod update
 * `la`:     ls -a
@@ -59,7 +58,4 @@ curl https://raw.githubusercontent.com/hanl001/macbootstrap/master/setup.sh | sh
 # About lldb 
 * `pjson`: pretty json print
 * all command at [chisel](https://github.com/facebook/chisel)
-
-# About ranger (see more at: config/tool-config/ranger/*)
-* j: use autojump to anywhere
 

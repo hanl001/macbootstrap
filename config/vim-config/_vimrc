@@ -21,6 +21,7 @@ Plugin 'hanl001/vim-swift'
 Plugin 'ybian/smartim'
 Plugin 'junegunn/fzf'
 Plugin 'junegunn/fzf.vim'
+Plugin 'Exafunction/windsurf.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -128,7 +129,9 @@ set nu
 set ruler
 
 set fileencodings=utf-8,ucs-bom,gbk,gb2312,utf-8,default,latin1
-set termencoding=utf-8
+if !has('nvim')
+    set termencoding=utf-8
+endif
 set encoding=utf-8
 let html_no_rendering=1
 

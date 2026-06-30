@@ -17,7 +17,7 @@ source $shell_src_path/path.sh
 source $shell_src_path/link.sh
 
 function _get_full_command() {
-    short=" t:test,
+    short=" t:_selftest,
     tx:to_xcode_snippets_path,
     tm:to_macbootstrap_path,
     l:link,
@@ -52,8 +52,7 @@ function help() {
             check_oh_myzsh            check oh-my-zsh and some tools
             check_vim                 check vim env
             check_xcode_snippets      check xcode snippets
-            check_others              check other tools that cannot be installed using brew
-            check_applications        check applications use brew cask
+            check_applications        check applications use brew --cask
             update                    sync macbootstrap from remote and update on-my-zsh
     
     
@@ -62,7 +61,6 @@ function help() {
             link                      link all configs
             link_git                  link git configs
             link_shell                link shell configs
-            link_ranger               link ranger configs
             link_vim                  link vim configs and check Plugins
             link_lldb                 links lldb configs
     

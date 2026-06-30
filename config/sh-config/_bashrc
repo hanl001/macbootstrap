@@ -1,2 +1,4 @@
 # MARK: - linked empty file to reflect changes for .bashrc
 echo 'linked .bashrc warning'
+
+. "$HOME/.local/bin/env"

@@ -1,2 +1,4 @@
 # MARK: - linked empty file to reflect changes for .bash_profile
 echo 'linked .bash_profile warning'
+
+. "$HOME/.local/bin/env"
