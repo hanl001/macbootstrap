@@ -16,11 +16,11 @@ Everything is driven through `manager.sh`, which is exposed in the interactive s
 - `hl install` — check/install brew packages, oh-my-zsh, neovim, xcode snippets, cask apps (each is idempotent: checks for an existing binary/path before installing)
 - `hl link` — symlink all configs into `$HOME` (git, shell, vim, lldb)
 - `hl update` — `git pull -r` this repo and `~/.oh-my-zsh` (wrapped in stash/pop)
-- `hl tm` / `hl tx` — `cd` to the repo / to the Xcode CodeSnippets dir
+- `hl tx` — `cd` to the Xcode CodeSnippets dir
 
 Sub-targets can be run individually, e.g. `hl link_vim`, `hl check_brew`, `hl link_git`.
 
-`manager.sh` resolves a short→long alias map in `_get_full_command` (e.g. `l`→`link`, `i`→`install`, `u`→`update`, `tm`/`tx` for path jumps), then dispatches `$action "$@"`.
+The `hl` function resolves a short→long alias map in `_hl_resolve` (`shell-src/global/function.sh`, e.g. `l`→`link`, `i`→`install`, `u`→`update`, `tx` for the path jump), handles the `cd` target in-shell, and passes the resolved full command to `manager.sh`, which dispatches `$action "$@"`.
 
 ## Architecture
 

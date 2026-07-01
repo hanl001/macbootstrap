@@ -3,8 +3,22 @@ function exe_cmd() {
     eval $1
 }
 
-function _selftest() {
-    echo "call test"
+# 安全建软链，替代裸 ln -sf：
+#   - 已是指向 src 的正确软链 → 跳过（幂等、安静）
+#   - 目标是真实文件/目录 → 先备份成 .bak.<时间戳> 再替换，绝不静默覆盖用户数据
+#   - 用 -sfn：目标若是已存在的目录软链，替换它本身而非把链建进其内部
+function _link() {
+    local src="$1" dst="$2"
+    if [ -L "$dst" ] && [ "$(readlink "$dst")" = "$src" ]; then
+        log_info "已链接，跳过: $dst -> $src"
+        return 0
+    fi
+    if [ -e "$dst" ] && [ ! -L "$dst" ]; then
+        local bak="$dst.bak.`date +%Y%m%d%H%M%S`"
+        log_todo "$dst 是真实文件，备份到 $bak 再替换"
+        mv "$dst" "$bak"
+    fi
+    exe_cmd "ln -sfn '$src' '$dst'"
 }
 
 function log_run() {

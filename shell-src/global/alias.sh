@@ -1,6 +1,4 @@
 alias vim='nvim'
-alias pud='pod update'
-alias pin='pod install'
 alias soundoff='sudo nvram SystemAudioVolume=%80'
 alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
 alias o='open'
@@ -14,6 +12,7 @@ alias ph='open /System/Volumes/Data/Applications/PhpStorm.app'
 alias sf='defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder'
 alias hf='defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder'
 alias vf='vim $(fzf --height 40%)'
+alias cc='claude --dangerously-skip-permissions'
 
 alias 。。='..'
 alias 。='.'

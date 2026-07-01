@@ -18,6 +18,7 @@ SRC="$HOME/.agents/skills"
 TARGETS=(
   "$HOME/.claude/skills"   # Claude Code CLI
   "$HOME/.codex/skills"    # Codex
+  "$HOME/.hermes/skills"   # Hermes Agent
 )
 
 [ -d "$SRC" ] || { echo "源目录不存在: $SRC，跳过"; exit 0; }

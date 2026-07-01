@@ -13,26 +13,26 @@ function link_git() {
         exe_cmd "cp $gitignore_source_path $gitignore_target_path"
     fi
 
-    exe_cmd "ln -sf $gitignore_target_path ~/.gitconfig"
-    exe_cmd "ln -sf $config_path/git-config/_gitignore_global ~/.gitignore_global"
+    _link "$gitignore_target_path" ~/.gitconfig
+    _link "$config_path/git-config/_gitignore_global" ~/.gitignore_global
 }
 
 function link_shell() {
-    exe_cmd "ln -sf $config_path/sh-config/_zshrc ~/.zshrc"
-    exe_cmd "ln -sf $config_path/sh-config/_zprofile ~/.zprofile"
-    exe_cmd "ln -sf $config_path/sh-config/_zshenv ~/.zshenv"
+    _link "$config_path/sh-config/_zshrc" ~/.zshrc
+    _link "$config_path/sh-config/_zprofile" ~/.zprofile
+    _link "$config_path/sh-config/_zshenv" ~/.zshenv
 
-    exe_cmd "ln -sf $config_path/sh-config/_inputrc ~/.inputrc"
+    _link "$config_path/sh-config/_inputrc" ~/.inputrc
 
-    exe_cmd "ln -sf $config_path/sh-config/_bashrc ~/.bashrc"
-    exe_cmd "ln -sf $config_path/sh-config/_bash_profile ~/.bash_profile"
+    _link "$config_path/sh-config/_bashrc" ~/.bashrc
+    _link "$config_path/sh-config/_bash_profile" ~/.bash_profile
 }
 
 function link_vim() {
-    exe_cmd "ln -sf $config_path/vim-config/vimfiles ~/.vim"
-    exe_cmd "ln -sf $config_path/vim-config/_vimrc ~/.vimrc"
+    _link "$config_path/vim-config/vimfiles" ~/.vim
+    _link "$config_path/vim-config/_vimrc" ~/.vimrc
     exe_cmd "mkdir -p ~/.config/nvim"
-    exe_cmd "ln -sf $config_path/vim-config/nvim/init.vim ~/.config/nvim/init.vim"
+    _link "$config_path/vim-config/nvim/init.vim" ~/.config/nvim/init.vim
 
     if [ ! -d "$config_path/vim-config/vimfiles/bundle/Vundle.vim" ]; then
         exe_cmd "git clone https://github.com/VundleVim/Vundle.vim.git $config_path/vim-config/vimfiles/bundle/Vundle.vim"
@@ -41,5 +41,5 @@ function link_vim() {
 }
 
 function link_lldb() {
-    exe_cmd "ln -sf $config_path/tool-config/lldb/_lldbinit ~/.lldbinit"
+    _link "$config_path/tool-config/lldb/_lldbinit" ~/.lldbinit
 }

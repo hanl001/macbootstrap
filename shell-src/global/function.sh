@@ -1,17 +1,25 @@
+# hl 短命令 → 全名（命令很少，直接 case，省掉原来那次 manager.sh 子进程解析）
+function _hl_resolve() {
+    case "$1" in
+        tx) echo to_xcode_snippets_path ;;
+        l)  echo link ;;
+        i)  echo install ;;
+        u)  echo update ;;
+        *)  echo "$1" ;;
+    esac
+}
+
 function hl() {
-    command=`bash "$MACBOOTSTRAP_ROOT/manager.sh" _get_full_command "$1"`
-    if [ "$command" = "to_xcode_snippets_path" ]
-    then
-        project_path=`bash "$MACBOOTSTRAP_ROOT/manager.sh" get_xcode_snippets_path`
-        echo change dir to $project_path
-        cd $project_path
-    elif [ "$command" = "to_macbootstrap_path" ]
-    then
-        echo change dir to $MACBOOTSTRAP_ROOT
-        cd $MACBOOTSTRAP_ROOT
-    else
-        bash "$MACBOOTSTRAP_ROOT/manager.sh" "$@"
-    fi
+    local action=`_hl_resolve "${1:-help}"`
+    # cd 类命令必须在交互 shell 内执行（子进程 cd 不生效），其余解析成全名后转交 manager.sh
+    case "$action" in
+        to_xcode_snippets_path)
+            local project_path=`bash "$MACBOOTSTRAP_ROOT/manager.sh" get_xcode_snippets_path`
+            echo "change dir to $project_path"
+            cd "$project_path" ;;
+        *)
+            bash "$MACBOOTSTRAP_ROOT/manager.sh" "$action" "${@:2}" ;;
+    esac
 }
 
 function hs() {
@@ -36,4 +44,9 @@ function claude() {
 function codex() {
     bash "$MACBOOTSTRAP_ROOT/shell-src/global/agents_skills_sync.sh" >/dev/null 2>&1
     command codex "$@"
+}
+
+function hermes() {
+    bash "$MACBOOTSTRAP_ROOT/shell-src/global/agents_skills_sync.sh" >/dev/null 2>&1
+    command hermes "$@"
 }

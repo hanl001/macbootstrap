@@ -16,21 +16,6 @@ source $shell_src_path/update.sh
 source $shell_src_path/path.sh
 source $shell_src_path/link.sh
 
-function _get_full_command() {
-    short=" t:_selftest,
-    tx:to_xcode_snippets_path,
-    tm:to_macbootstrap_path,
-    l:link,
-    i:install,
-    u:update"
-    full=$(expr "$short" : ".* $2:\([^,]*\),.*")
-    if [ ! $full ]
-    then
-        full=$2
-    fi
-    echo $full
-}
-
 function help() {
 	cat <<-EOF
 
@@ -67,7 +52,6 @@ function help() {
 
     * about quick location path
     
-            tm                        jump to macbootstrap path
             tx                        jump to xcode snippets path
     
             
