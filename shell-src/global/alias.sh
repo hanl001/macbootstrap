@@ -12,7 +12,7 @@ alias ph='open /System/Volumes/Data/Applications/PhpStorm.app'
 alias sf='defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder'
 alias hf='defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder'
 alias vf='vim $(fzf --height 40%)'
-alias cc='claude --dangerously-skip-permissions'
+alias cc='claude --dangerously-skip-permissions --add-dir ~'
 
 alias 。。='..'
 alias 。='.'
